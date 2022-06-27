@@ -1,0 +1,38 @@
+<template>
+
+    <lightning-card title="Contact Manager Via Forms (Edit Form,View Form..etc.,)">
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around-small">
+
+                <lightning-card title="Create New Contact">
+                    <lightning-record-edit-form object-api-name="Contact" onsuccess={successHandler}>
+                        <p><lightning-input-field field-name="Salutation"></lightning-input-field></p>
+                        <p><lightning-input-field field-name="FirstName"></lightning-input-field></p>
+                        <p><lightning-input-field field-name="LastName"></lightning-input-field></p> 
+                        <p><lightning-input-field field-name="CurrencyIsoCode"></lightning-input-field></p>
+
+                        <p><lightning-button type="submit" variant="brand" name="same" label="Create New Contact"></lightning-button></p>
+                        
+                    </lightning-record-edit-form>
+
+                </lightning-card>
+            </lightning-layout-item>
+
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-card title="View An Contact Record">
+                  <lightning-record-view-form object-api-name="Contact" record-id={recordId} >
+                      <div class="slds-box">
+                          <p>Con Record Id: {recordId}</p>  
+                          <p><lightning-output-field field-name="Salutation"></lightning-output-field></p>
+                          <p><lightning-output-field field-name="FirstName"></lightning-output-field></p>
+                          <p><lightning-output-field field-name="LastName"></lightning-output-field></p>
+                          <p><lightning-output-field field-name="CurrencyIsoCode"></lightning-output-field></p> 
+                          <!-- <p><lightning-output-field field-name="id"></lightning-output-field></p>   -->
+                      </div>
+                  </lightning-record-view-form>
+                </lightning-card>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+    
+</template>

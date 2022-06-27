@@ -1,0 +1,77 @@
+<template>
+<lightning-card title="Rich Input Text">
+    <lightning-input-rich-text
+    value={myVal}
+    onchange={handleChange}>
+</lightning-input-rich-text>
+
+<lightning-formatted-rich-text value={myVal}></lightning-formatted-rich-text>
+</lightning-card>
+
+<lightning-card title="Tool bar Button">
+    <lightning-input-rich-text
+    formats="font, bold, italic, underline, strike,
+list, indent, align, link, image, clean, code, code-block, color, background, header"
+>
+    <lightning-rich-text-toolbar-button-group
+        slot="toolbar"
+        aria-label="First group"
+    >
+        <lightning-rich-text-toolbar-button
+            icon-name="utility:insert_tag_field"
+            icon-alternative-text="Code Snippet"
+            onclick={handleCodeBlockButtonClick}
+        >
+        </lightning-rich-text-toolbar-button>
+    </lightning-rich-text-toolbar-button-group>
+</lightning-input-rich-text>
+
+</lightning-card>
+
+<lightning-card title="Vol Slider">
+    <div class="slds-m-around_medium">
+        <h1 class="slds-text-heading_small">Basic Slider</h1>
+        <p class="slds-text-body_regular">A slider lets you specify a number between two specified values. If a range is not provided, the slider defaults to a minimum of 0 and a maximum of 100.</p>
+    </div>
+    
+    <lightning-slider label="Volume" value={val}></lightning-slider>
+</lightning-card>
+
+    <lightning-card>
+    <lightning-button label="Toggle" variant="brand" onclick={handleClick}></lightning-button>
+
+    <div class="ExampleHolder">
+        <template if:true={loaded}>
+            Put loaded content here
+        </template>
+        <template if:false={loaded}>
+            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </template>
+    </div>
+
+    </lightning-card>
+         <!-- input address markup starts here ..........................................-->
+    <lightning-card title="Address Input">
+        <div class="slds-m-around_medium">
+            <lightning-input-address
+                address-label="Address"
+                street-label="Street"
+                city-label="City"
+                country-label="Country"
+                province-label="Province"
+                postal-code-label="PostalCode"
+                street={address.street}
+                city={address.city}
+                country={address.country}
+                province={address.province}
+                postal-code={address.postalCode}
+                field-level-help="Help Text for inputAddress field" 
+                country-options={getCountryOptions}
+                province-options={getProvinceOptions}
+                onchange={handleChange} >
+            </lightning-input-address>
+        </div>
+        
+    </lightning-card>
+    <!-- input address markup ends here ............................................................-->
+</template>

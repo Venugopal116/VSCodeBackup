@@ -1,0 +1,309 @@
+<template>
+    <div class="c-container" style="height: 100vh;" >
+        <lightning-layout multiple-rows="true">
+            <!-- ==================================== Tab start ==================================================== -->
+            <lightning-layout-item padding="around-large" size="12">
+
+                <div class="page-section page-right">   
+
+    <!-- <marquee> Lets Move this text.</marquee> -->
+    <marquee direction="right" behavior="alternate" style="font-size:17px; font-weight:bold;" >  
+        <!-- bgcolor="#6a7ea5" -->
+    <!-- style="border:BLACK 2px SOLID" -->
+       
+        Welcome To Cloud Odyssey Employee Service Portal
+    </marquee>
+
+  
+                    <!-- <lightning-button class="slds-p-around_small" label="New Emp" onclick={newEmpNavigation}>
+                    </lightning-button>
+                    <lightning-button class="slds-p-around_small" label="View Emp" onclick={viewEmpNavigation}>
+                    </lightning-button>
+                    <lightning-button class="slds-p-around_small" label="Edit Emp" onclick={editEmpNavigation}>
+                    </lightning-button>
+                    <lightning-button class="slds-p-around_small" label="L-Community" onclick={communityPgNavigation}>
+                    </lightning-button>
+                    <lightning-button class="slds-p-around_small" label="L-Community Auth"
+                        onclick={communityPgAuthNavigation}></lightning-button>
+                    <lightning-button class="slds-p-around_small" label="ExternalUrl" onclick={navigateToExternalUrl}>
+                    </lightning-button> -->
+
+
+                </div>
+
+            </lightning-layout-item>
+            <!-- ====================================tab end==================================================== -->
+            <lightning-layout-item padding="around-small" size="12">
+                <lightning-layout>
+                    <!-- ====================================right side bar start==================================================== -->
+                    <lightning-layout-item padding="around-small" size="2">
+                        <div style="height: 65vh;" class="page-section page-right">
+
+
+                            <lightning-vertical-navigation selected-item="reports_recent">
+                                <lightning-vertical-navigation-section label="Employee Services">
+                                    <lightning-vertical-navigation-item-icon label="Employee Home" name="empHome"
+                                        icon-name="utility:agent_home" onclick={defaultPgkHandler}>
+                                    </lightning-vertical-navigation-item-icon>
+                                    <lightning-vertical-navigation-item-icon label="Employee List" name="employList"
+                                        icon-name="utility:groups" onclick={employeeListPgHandler}>
+                                    </lightning-vertical-navigation-item-icon>
+                                    <lightning-vertical-navigation-item-icon label="Enroll New Employee" name="newEmp"
+                                        icon-name="utility:user" onclick={newEmployeePgHandler}>
+                                    </lightning-vertical-navigation-item-icon>
+                                    <lightning-vertical-navigation-item-icon label="Edit Employee" name="EditEmp"
+                                        icon-name="utility:edit" onclick={editEmployeePgHandler}>
+                                    </lightning-vertical-navigation-item-icon>
+                                    <lightning-vertical-navigation-item-icon label="Delete an Employee" name="deleteEmp"
+                                        icon-name="utility:recycle_bin_empty" onclick={deleteEmployeePgHandler}>
+                                    </lightning-vertical-navigation-item-icon>
+
+                                </lightning-vertical-navigation-section>
+
+
+                            </lightning-vertical-navigation>
+
+
+                        </div>
+                    </lightning-layout-item>
+                    <!-- ====================================right side bar end==================================================== -->
+
+                    <!-- ==============================Employee Pages rendering start========================================================== -->
+
+                    <lightning-layout-item style="height:70vh;" flexibility="auto" padding="around-small" size="8">
+
+                        <template if:true={defaultMainPage}>
+                            <lightning-layout-item >
+                                <div 
+                                style={empBackgroundImage}
+                                 class="page-section page-main">
+
+                                    <h2 class="coteamtitleOnpic" style="text-align: right; font:caption; font-size:20PX "><b>Cloud Odyssey Team</b></h2>
+
+                                   
+
+
+                                </div>
+
+                            </lightning-layout-item>
+                        </template>
+
+
+                        <!-- .............................................. -->
+
+                        
+
+                        <template if:true={employeeListPg}>
+                          
+                            
+                            <lightning-layout-item>
+                                <div style="height:65;" flexibility="auto" class="page-section page-main">
+
+                                       <!-- .......................... search bar start ............................ -->
+                                       <div class="slds-box searchBarBgColor" style="height:20vh;">
+                                        <p style="text-align: center; font:caption; font-size:15px " class="title"><b>Search
+                                                Employees</b></p>
+        
+                                        <lightning-layout multiple-rows>
+                                                <lightning-layout-item padding="around-small" size="12" small-device-size="12"
+                                                    medium-device-size="6" large-device-size="2">
+                                            </lightning-layout-item>
+        
+                                            <lightning-layout-item padding="around-small" size="12" small-device-size="12"
+                                                medium-device-size="6" large-device-size="8">
+                                                <lightning-input
+                                                    class="slds-text-heading_medium slds-text-align_center searchKeyButton textProperties"
+                                                    vlaue={handleChange} label="" placeholder="Search Employee By Name">
+                                                </lightning-input><!-- class="searchKeyButton" --> <br>
+        
+                                                <lightning-button class="slds-align_absolute-center searchKeyBtn"
+                                                    variant="brand" label="Search Employees" value={searchKey} onclick={searchHandle}>
+                                                </lightning-button>
+        
+                                            </lightning-layout-item>
+        
+                                            <lightning-layout-item padding="around-small" size="12" small-device-size="12"
+                                                medium-device-size="6" large-device-size="2">
+                                            </lightning-layout-item>
+        
+                                        </lightning-layout>
+                                    </div>
+                                    <br>
+
+                                         <!-- .........................................search bar end -->
+
+                                    <!-- fetching data from here -->
+                                    <template if:true={employees}>
+                                         <!-- .........................................data table scrolling start-->
+                                      <lightning-layout >
+                                         <div style="height: 350px;">
+                                            <lightning-datatable
+                                
+                                                    key-field="id"
+                                                    data={employees}
+                                                    show-row-number-column
+                                                    row-number-offset={rowOffset}
+                                                    suppress-bottom-bar
+                                                    columns={columns}>
+                                            </lightning-datatable>
+                                        </div>
+                                    </lightning-layout> 
+                                        
+                                        <!-- .........................................data table scrolling endddddd -->
+                                     
+                                    </template>
+
+                                </div>
+
+                            </lightning-layout-item>
+                        </template>
+                        <!-- .............................................. -->
+                        <template if:true={newEmployeePg}>
+                        
+
+                            <lightning-layout-item >
+                                <div class="slds-p-around_medium lgc-bg page-section page-main" style="height: 70vh;" >
+                                  <div class="slds-text-align_center">
+                                    <lightning-formatted-text class="NewEmployee slds-text-align_center " type="text" value="Enroll New Employee" name="newEmp" ></lightning-formatted-text>
+                                  </div>
+
+                                  <div class="slds-p-around_medium">
+                                    <lightning-input type="text" label="Employee Name" placeholder="Enter Name" value={empName} align="center" name="empFirstName" onchange={empNameHandleChange}></lightning-input>
+                                    <lightning-input type="text" label="Phone" placeholder="Enter Phone" value={empPhone} align="center" name="empLastName" onchange={empPhoneHandleChange}></lightning-input>
+                                    <lightning-input type="email" label="Email" placeholder="Enter Email" value={empEmail} align="center" name="empEmail" onchange={empEmailHandleChange}></lightning-input>
+                                    <lightning-input type="phone" label="Aadhaar No" placeholder="Enter Aadhar" value={empAaadhar} align="center" name="empPhone" onchange={empAaadharHandleChange}></lightning-input>
+                                 </div>
+
+
+                                  <div  class="slds-text-align_center slds-p-around_medium">
+                                    <lightning-button variant="brand" label="Create New Emp" align="center" onclick={empNewInsertHandle}></lightning-button>
+                                  </div>
+                              
+                                </div>
+
+                            </lightning-layout-item>
+                                       
+
+                        </template>
+                        <!-- .............................................. -->
+                        <template if:true={editEmployeePg}>
+
+                            
+                            
+                            <lightning-layout-item>
+        
+                                <div style="height: 70vh;" class="page-section page-main">
+                                    <div class="slds-text-align_center">
+                                        <lightning-formatted-text class="NewEmployee slds-text-align_center " type="text" value="Edit An Employee" name="editEmp" ></lightning-formatted-text>
+                                      </div> </br>
+                                    <!-- .................edit table start............................. -->
+                                    <lightning-layout >
+                                        <div style="height: 450px;">
+                                            
+                                            <lightning-datatable key-field="Id" 
+                                            data={empObj.data} 
+                                            columns={columns2} 
+                                           
+                                            draft-values={fldsItemValues} 
+                                            hide-checkbox-column 
+                                            show-row-number-column
+                                            onsave={saveHandleAction}>
+                                           </lightning-datatable>
+
+                                          
+
+                                       </div>
+                                   </lightning-layout>
+                                    <!-- .................edit table end............................. -->
+                                    
+                                    
+                                   
+
+                                </div>
+
+                            </lightning-layout-item>
+                        </template>
+                        <!-- .............................................. -->
+                        <template if:true={deleteEmployeePg}>
+                            <lightning-layout-item>
+                                <div style="height: 70vh;" class="page-section page-main">
+
+                                
+                                  <!-- .................delete record code here start............................. -->
+                                 
+                                    <lightning-card title="Delete an Employee" icon-name="custom:custom14">
+                                        <div class="slds-p-around_medium">
+                                         <table border="1" cellspacing="0" cellpadding="5" style="border-collapse:collapse;" class="tblColPad">
+                                             <tr>
+                                                 <th>Name</th>
+                                                 <th>Mobile</th>
+                                                 <th>Email</th>
+                                                 <th>Aadhar</th>
+                                                 <th> </th>
+                                             </tr>
+                                             <template for:each={getEmp.data} for:item="empItem">
+                                                 <tr key={empItem.Id}>
+                                                     <td>{empItem.Name}</td>
+                                                     <td>{empItem.Mobile__c}</td>
+                                                     <td>{empItem.Email__c}</td>
+                                                     <td>{empItem.Aadhaar_No__c}</td>
+
+                                                     <td><lightning-button label="Delete" size="small" variant="neutral" onclick={handleEmpDelete} value={empItem.Id} icon-name="utility:delete" icon-position="right" class="deleteButton"></lightning-button></td>
+                                                 </tr>
+                                             </template>
+                                         </table>
+                                
+                                        </div>
+                                  
+                                    </lightning-card>
+                               
+
+                                  <!-- .................delete record code here endddddd............................. -->
+
+
+                                </div>
+
+                            </lightning-layout-item>
+                        </template>
+                        <!-- .............................................. -->
+                    </lightning-layout-item>
+
+                    <!-- ====================================Employee Pages rendering ending==================================================== -->
+
+                    <!-- ====================================Left side bar start==================================================== -->
+                    <lightning-layout-item padding="around-small" size="2">
+                        <div style="height: 40vh;" class="page-section page-right">
+
+                            <lightning-vertical-navigation>
+
+
+                                <lightning-vertical-navigation-section label="Contact Us">
+                                    <lightning-vertical-navigation-item-icon label="Contact By Email" name="emailCont"
+                                        icon-name="utility:new_direct_message">
+                                    </lightning-vertical-navigation-item-icon>
+                                    <lightning-vertical-navigation-item-icon label="Contact by Phone" name="phonecont"
+                                        icon-name="utility:dialing">
+                                    </lightning-vertical-navigation-item-icon>
+                                    <lightning-vertical-navigation-item-icon label="Raise a Ticket" name="ticket"
+                                        icon-name="utility:problem">
+                                    </lightning-vertical-navigation-item-icon>
+                                </lightning-vertical-navigation-section>
+                            </lightning-vertical-navigation>
+
+
+                        </div>
+                    </lightning-layout-item>
+
+                    <!-- ===================================Left side bar end===================================================== -->
+
+                </lightning-layout>
+            </lightning-layout-item>
+            <!-- ===================================footer==================================================== -->
+            <!-- <lightning-layout-item flexibility="auto" padding="around-small" size="12">
+                <div class="page-footer page-section">
+                    <h2>Footer</h2>
+                </div>
+            </lightning-layout-item> -->
+        </lightning-layout>
+    </div>
+</template>

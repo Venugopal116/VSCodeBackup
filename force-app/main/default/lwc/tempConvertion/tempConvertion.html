@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title ="Temperature Conversion"  icon-name="utility:food_and_drink">
+        <lightning-layout multiple-rows>
+			<lightning-layout-item padding="around-medium" size="12">
+				<lightning-input type="number" name="TempConvert" label="Enter Temparature In (F)" onchange={tempChangeHandler}>
+				</lightning-input>
+			</lightning-layout-item>
+           
+
+        </lightning-layout>
+        <lightning-layout-item padding="around-medium" size="12">
+            <lightning-button-group>
+                <lightning-button label="Convert To Celcius" icon-name="utility:change_request" icon-position="right" onclick={tempConversion}>
+                </lightning-button>  
+            </lightning-button-group>
+        </lightning-layout-item>
+
+        <p> The Converted Temp into Celcius Is : {convertedResult}°C</p>
+    </lightning-card>
+    
+</template>

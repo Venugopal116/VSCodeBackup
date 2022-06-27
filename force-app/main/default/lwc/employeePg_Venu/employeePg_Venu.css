@@ -1,0 +1,145 @@
+
+table.tblColPad th{background:#ddd;}
+table.tblColPad th, table.tblColPad td {padding:5px !important;}
+
+
+
+
+.c-container {
+    border: 1px solid #d8dde6;
+    margin: 10px 0 20px 0;
+    background-color:#445973;
+}
+.page-section {
+    border: solid 1px #06193a;
+    padding: 1rem;
+}
+.page-header, 
+.page-footer {
+    height: 50px;
+}
+.page-main {
+    background: #f7f7f7cc;
+}
+.page-left,
+.page-right {
+    background: #ede8e8;
+}
+
+     /* --------------------------------------------------------------------------------- */
+
+     .textProperties{
+        color: Black;
+        font-weight:bold;
+        font-size:10px !important;
+        /* background-color: #000000; */
+        text-align: center;
+        --slds-c-input-color-background:#f5f5f5;
+        --slds-c-input-radius-border:24rem;
+        
+    }
+    .NewEmployee{
+        text-align: center;
+        position: relative;
+        color: Black;
+        font-weight:bold;
+        font-size:18px !important;
+       
+        text-align: center;
+       
+        
+    }
+    .title{
+        color: rgb(255, 255, 255);
+        font-style: oblique;
+    }
+    
+    .tableLabelProperties{
+        color: Black;
+        font-weight:bolder;
+        font-size:15px !important;
+        
+    }
+    
+    .searchBarBgColor{
+        background-color: #395f8b; 
+    }
+    .conIdTitle{
+        background-color: #436ea0;
+    }
+    .conNameTitle{
+        background-color: #497cb6;
+    }
+    .phoneLabelTitle{
+        background-color: #518acc;
+    }
+    .emailLabelTitle{
+        background-color: #5fa0ea;
+    }
+    /* --------------------------------------------------------------------------- */
+    
+    .MconIdTitle{
+        background-color: #43516b;
+    }
+    .MconNameTitle{
+        background-color: #2b376b;
+    }
+    .MphoneLabelTitle{
+        background-color: #3e417b;
+    }
+    .MemailLabelTitle{
+        background-color: #51517d;
+    }
+    /* --------------------------------------------------------------------------- */
+    
+    
+    .accResultTextProps{
+        color: Black;
+        font-weight:bolder;
+    }
+    
+    .titleInputBoxRound{
+        --slds-c-input-radius-border:1rem;
+        color: Black;
+        font-weight:bold;
+    }
+
+    .coteamtitleOnpic{
+        color: rgb(210, 201, 201);
+       
+    }
+    
+     /* //----------------------------------------------------------------------------------------------------- */
+    
+    
+    .textInput{
+        -webkit-text-fill-color: rgba(255, 255, 255, 0.882);
+    }
+    
+    .buttonColor{
+        --slds-c-button-brand-color-background:#0ac7d8;
+    }
+    
+    lightning-button.buttonClr{ 
+    
+        --sds-c-button-brand-color-background: hsl(0, 4%, 18%);
+    
+        --sds-c-button-text-color: #ffffff;
+    
+    }
+    
+    .THIS .textColorInput{
+        color: Black;
+        font-weight: bold;
+        background-color: #242222;
+    }
+    
+    .inputboxcolor{
+        --slds-c-input-color-background:#0d0d0d;
+        --slds-c-input-radius-border:24rem;
+    }
+    lightning-button.signupButtonclr{
+        --sds-c-button-brand-color-background: hsl(0, 4%, 18%);
+    
+        --sds-c-button-text-color: #ffffff;
+    }

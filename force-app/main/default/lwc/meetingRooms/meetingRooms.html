@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Meeting Rooms">
+      <lightning-layout>
+        <lightning-layout-item size="4" padding="around-small">
+            <ul>
+                <template for:each={meetingRoomsInfo} for:item="room">
+                    <li key={room.roomName} style="padding:10px">
+                    <p >Room Name:{room.roomName} ,Room Capacity: {room.roomCapacity}</p>
+                    </li>
+    
+                </template>
+            </ul>
+        </lightning-layout-item>
+      </lightning-layout>
+       
+        <!-- <ul>
+            <template for:each={meetingRoomsInfo} for:item="room">
+                <li key={room.roomName} style="padding:10px">
+                <p >Room Name:{room.roomName} ,Room Capacity: {room.roomCapacity}</p>
+                </li>
+
+            </template>
+        </ul> -->
+    </lightning-card>
+    
+</template>

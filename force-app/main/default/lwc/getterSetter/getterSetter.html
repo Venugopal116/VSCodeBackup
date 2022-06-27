@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Convert Days,Hours,Minutes,Seconds in to MILLI-SECONDS">
+ <div class="c-container" >
+    <lightning-layout>
+        <lightning-layout-item padding="around-small"> <!--//for getting input -->
+            <lightning-input  data-id="Test" type="number" name="" variant="label-hidden" placeholder="Number To Convert" value={enteredNumberToConvert} onchange={inputhandleChange} >
+
+            </lightning-input>
+        </lightning-layout-item>
+            <lightning-layout-item padding="arounnd-small">   <!--//for selecting dropdown box -->
+               <lightning-combobox name="" label=""  value={SelectedOptionByUser} placeholder="Select" options={getOneOptionFrmList} onchange={optionHandleChange}>
+
+               </lightning-combobox>
+            </lightning-layout-item >
+
+            <lightning-layout-item padding="arounnd-small"> <!--//for button -->
+              <lightning-button variant="brand" label="Convert" title="Convert"  onclick={handleConvertButtonClick} class="slds-var-m-left_small"></lightning-button>
+            </lightning-layout-item>
+
+            <lightning-layout-item>  <!--//for getting output-->
+              <lightning-input type="number" name="" variant="label-hidden" value={convertedValue} disabled="true" >
+
+              </lightning-input>Milli Seconds
+            </lightning-layout-item>
+
+       
+    </lightning-layout>
+ </div>
+</lightning-card>  
+</template>

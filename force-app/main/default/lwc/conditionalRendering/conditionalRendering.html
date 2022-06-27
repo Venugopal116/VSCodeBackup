@@ -1,0 +1,20 @@
+<template>
+  <lightning-card title="Conditional Rendering">
+
+       <lightning-input type="checkbox" label ="ShowDiv" onchange={showDivHandler}>  </lightning-input>
+
+        <template if:true = {displayDiv} >
+              <div> Hey I'm Checked.I'm Visible to you </div>
+        </template>
+
+        <template if:false = {displayDiv} >
+            <div> Hey I'm hided.Please check me </div>
+       </template> 
+ 
+      <template for:each={CityList} for:item="City">
+         <p key={City}>{City}</p>
+       </template>           
+
+       </lightning-card>
+
+</template>

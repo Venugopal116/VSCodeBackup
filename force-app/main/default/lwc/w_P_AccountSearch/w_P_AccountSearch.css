@@ -1,0 +1,57 @@
+.textProperties{
+    color: Black;
+    font-weight:bolder;
+    font-size:25px !important;
+    /* background-color: #000000; */
+    text-align: center;
+    --slds-c-input-color-background:#f5f5f5;
+    --slds-c-input-radius-border:24rem;
+    
+}
+
+.tableLabelProperties{
+    color: Black;
+    font-weight:bolder;
+    font-size:15px !important;
+    
+}
+
+.searchBarBgColor{
+    background-color: #a7b8ba; 
+}
+
+.accountLabelTitle{
+    background-color: #e6f3f5;
+}
+.phoneLabelTitle{
+    background-color: #ccd6d7;
+}
+.IndustryLabelTitle{
+    background-color: #c2c8c8;
+}
+.emptyTitle{
+    background-color: #c7cece;
+}
+.accResultTextProps{
+    color: Black;
+    font-weight:bolder;
+}
+
+
+/* -------------------------Gowtham suggitions------------------------- */
+
+.slds-form-element__label{
+    font-size:25px !important;  
+}
+
+lightning-input.labelfontsize {
+    font-size:15px !important;
+}
+
+lightning-input > label{
+    font-size:25px !important;
+}
+
+lightning-input.slds-form-element__label {
+    font-size:25px !important;
+}

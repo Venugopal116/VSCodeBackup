@@ -1,0 +1,584 @@
+{
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app",
+    "isDirectory": true,
+    "modifiedTime": 1645476391186,
+    "changeTime": 1645476391186,
+    "contentHash": "b28b7af69320201d1cf206ebf28373980add1451",
+    "state": "u",
+    "isArtifactRoot": true,
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main",
+    "isDirectory": true,
+    "modifiedTime": 1645476391186,
+    "changeTime": 1645476391186,
+    "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default",
+    "isDirectory": true,
+    "modifiedTime": 1645476391261,
+    "changeTime": 1645476391261,
+    "contentHash": "134fb9100108b9aaba9aee713cf235d514fd8f88",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\applications": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\applications",
+    "isDirectory": true,
+    "modifiedTime": 1645476391187,
+    "changeTime": 1645476391187,
+    "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\aura": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\aura",
+    "isDirectory": true,
+    "modifiedTime": 1645476391262,
+    "changeTime": 1645476391262,
+    "contentHash": "71c20a341bfe32aa5cd5b4384e94f942bab6a7d3",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\classes": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\classes",
+    "isDirectory": true,
+    "modifiedTime": 1648460699967,
+    "changeTime": 1648460699967,
+    "contentHash": "cea7875842866e80af9f6fb02839cb580147142b",
+    "state": "u",
+    "package": "force-app",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\contentassets": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\contentassets",
+    "isDirectory": true,
+    "modifiedTime": 1645476391187,
+    "changeTime": 1645476391187,
+    "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\flexipages": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\flexipages",
+    "isDirectory": true,
+    "modifiedTime": 1645476391187,
+    "changeTime": 1645476391187,
+    "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\layouts": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\layouts",
+    "isDirectory": true,
+    "modifiedTime": 1645476391188,
+    "changeTime": 1645476391188,
+    "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc",
+    "isDirectory": true,
+    "modifiedTime": 1648698396296,
+    "changeTime": 1648698396296,
+    "contentHash": "1502055af8cd5034821a894783de1a0c427e369e",
+    "state": "u",
+    "package": "force-app",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\conditionalRendering": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\conditionalRendering",
+    "isDirectory": true,
+    "modifiedTime": 1645678945807,
+    "changeTime": 1645678945807,
+    "contentHash": "e43efd1cba0efafecc5d70eb4220c9bfd05f8cbb",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\conditionalRendering\\conditionalRendering.html": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\conditionalRendering\\conditionalRendering.html",
+    "size": 786,
+    "modifiedTime": 1646026503095,
+    "changeTime": 1646026503095,
+    "contentHash": "206defcc718b9d9acf88e1190b4d46e237c9a715",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\conditionalRendering\\conditionalRendering.js": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\conditionalRendering\\conditionalRendering.js",
+    "size": 298,
+    "modifiedTime": 1646026506636,
+    "changeTime": 1646026506636,
+    "contentHash": "350a5f532693e6c14f663128f1d8d235aaf613fb",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\conditionalRendering\\conditionalRendering.js-meta.xml": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\conditionalRendering\\conditionalRendering.js-meta.xml",
+    "size": 430,
+    "modifiedTime": 1648630928837,
+    "changeTime": 1648630928837,
+    "contentHash": "d76872a0293a1dac4510d8bb7e1ce2aa28ac6f0a",
+    "isMetadataFile": true,
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\helloWorld": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\helloWorld",
+    "isDirectory": true,
+    "modifiedTime": 1645599064374,
+    "changeTime": 1645599064374,
+    "contentHash": "44f840d5626ef987bbbd93d80f0479943cbbb292",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\helloWorld\\helloWorld.css": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\helloWorld\\helloWorld.css",
+    "size": 119,
+    "modifiedTime": 1645605766092,
+    "changeTime": 1645605766092,
+    "contentHash": "6f7abd86a3a814a495820d7d9c01643d62fac241",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\helloWorld\\helloWorld.html": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\helloWorld\\helloWorld.html",
+    "size": 392,
+    "modifiedTime": 1646026495379,
+    "changeTime": 1646026495379,
+    "contentHash": "e9862cdd2a8bfa42ce92a215fceac27ff64128e9",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\helloWorld\\helloWorld.js": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\helloWorld\\helloWorld.js",
+    "size": 250,
+    "modifiedTime": 1645605771234,
+    "changeTime": 1645605771234,
+    "contentHash": "2878598dcc62e16e0490322c371fc9e1796dced0",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\helloWorld\\helloWorld.js-meta.xml": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\helloWorld\\helloWorld.js-meta.xml",
+    "size": 422,
+    "modifiedTime": 1648630939052,
+    "changeTime": 1648630939052,
+    "contentHash": "ad38335cf1ce4ef0810c9b9c88608eda6b53cf7c",
+    "isMetadataFile": true,
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\simpleCalculator": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\simpleCalculator",
+    "isDirectory": true,
+    "modifiedTime": 1645686106114,
+    "changeTime": 1645686106114,
+    "contentHash": "55fbe56812c68bc936bb5bfe40dcd836d4a48002",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\simpleCalculator\\simpleCalculator.html": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\simpleCalculator\\simpleCalculator.html",
+    "size": 1341,
+    "modifiedTime": 1648096043208,
+    "changeTime": 1648096043208,
+    "contentHash": "950bc3e2240dc451066ec110f0c41cffd36293de",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\simpleCalculator\\simpleCalculator.js": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\simpleCalculator\\simpleCalculator.js",
+    "size": 1200,
+    "modifiedTime": 1648095929382,
+    "changeTime": 1648095929382,
+    "contentHash": "ba0dda2c415f86582a6e5ed1d85894a907eb80f3",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\simpleCalculator\\simpleCalculator.js-meta.xml": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\simpleCalculator\\simpleCalculator.js-meta.xml",
+    "size": 483,
+    "modifiedTime": 1648630905512,
+    "changeTime": 1648630905512,
+    "contentHash": "5a2a408764dd0c24bb30c29d056e3f17ad3ec99d",
+    "isMetadataFile": true,
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\objects": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\objects",
+    "isDirectory": true,
+    "modifiedTime": 1645476391188,
+    "changeTime": 1645476391188,
+    "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\permissionsets": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\permissionsets",
+    "isDirectory": true,
+    "modifiedTime": 1645476391188,
+    "changeTime": 1645476391188,
+    "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\staticresources": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\staticresources",
+    "isDirectory": true,
+    "modifiedTime": 1645476391188,
+    "changeTime": 1645476391188,
+    "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\tabs": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\tabs",
+    "isDirectory": true,
+    "modifiedTime": 1645476391189,
+    "changeTime": 1645476391189,
+    "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\triggers": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\triggers",
+    "isDirectory": true,
+    "modifiedTime": 1645476391189,
+    "changeTime": 1645476391189,
+    "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC",
+    "isDirectory": true,
+    "modifiedTime": 1645476576933,
+    "changeTime": 1645535138365,
+    "contentHash": "048e999c88837e9e6685f530b5fd2da260af13a3",
+    "state": "u",
+    "isWorkspace": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\testClass": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\testClass",
+    "isDirectory": true,
+    "modifiedTime": 1648058910706,
+    "changeTime": 1648058910706,
+    "contentHash": "7dd25252ee7ad37a5d786764704ca9b5811a97db",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\testClass\\testClass.html": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\testClass\\testClass.html",
+    "size": 617,
+    "modifiedTime": 1648096220248,
+    "changeTime": 1648096220248,
+    "contentHash": "64dcd019fdb46ee0be3319fca903b69d64bcbe67",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\testClass\\testClass.js": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\testClass\\testClass.js",
+    "size": 829,
+    "modifiedTime": 1648062911050,
+    "changeTime": 1648062911050,
+    "contentHash": "8a6d0a3438431ce2665fb6a11a5be4afa590a290",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\testClass\\testClass.js-meta.xml": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\testClass\\testClass.js-meta.xml",
+    "size": 281,
+    "modifiedTime": 1648059626623,
+    "changeTime": 1648059626623,
+    "contentHash": "afa25afb906a4e18b3c570cf53acbd4f3aac09c1",
+    "isMetadataFile": true,
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\tempConvertion": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\tempConvertion",
+    "isDirectory": true,
+    "modifiedTime": 1648096632617,
+    "changeTime": 1648096632617,
+    "contentHash": "45a7f2d00606351368fae106154f0a5a50fab2a5",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\tempConvertion\\tempConvertion.html": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\tempConvertion\\tempConvertion.html",
+    "size": 880,
+    "modifiedTime": 1648184722848,
+    "changeTime": 1648184722848,
+    "contentHash": "012c9f4103af3173068a61ac9c52eaba8374b120",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\tempConvertion\\tempConvertion.js": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\tempConvertion\\tempConvertion.js",
+    "size": 495,
+    "modifiedTime": 1648446663645,
+    "changeTime": 1648446663645,
+    "contentHash": "e11c73b28f4cd8a113c796518f45a8eced6ef0bf",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\tempConvertion\\tempConvertion.js-meta.xml": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\tempConvertion\\tempConvertion.js-meta.xml",
+    "size": 422,
+    "modifiedTime": 1648630955259,
+    "changeTime": 1648630955259,
+    "contentHash": "772f2d1eced6b38168268f9cd0898c078b9659e5",
+    "isMetadataFile": true,
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\venuDev": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\venuDev",
+    "isDirectory": true,
+    "modifiedTime": 1648179074358,
+    "changeTime": 1648179074358,
+    "contentHash": "5bd6fd614735a96aeabb111715a77f963b754482",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\venuDev\\venuDev.html": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\venuDev\\venuDev.html",
+    "size": 1122,
+    "modifiedTime": 1648181039754,
+    "changeTime": 1648181039754,
+    "contentHash": "ea3d9fb61c3258979b71ba1ccaf1cebf92d3d2c8",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\venuDev\\venuDev.js": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\venuDev\\venuDev.js",
+    "size": 480,
+    "modifiedTime": 1648184352564,
+    "changeTime": 1648184352564,
+    "contentHash": "e681f13d8aa0a0a34387bc4ee5a6b04694a74abb",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\venuDev\\venuDev.js-meta.xml": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\venuDev\\venuDev.js-meta.xml",
+    "size": 372,
+    "modifiedTime": 1648181345243,
+    "changeTime": 1648181345243,
+    "contentHash": "ae094183e2ad0706724ef78401cebbd46c3a2ff4",
+    "isMetadataFile": true,
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\logicalLwcCmp": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\logicalLwcCmp",
+    "isDirectory": true,
+    "modifiedTime": 1648184682442,
+    "changeTime": 1648184682442,
+    "contentHash": "3d5658e0501c6f3bc8ae375771c10b49b6e05df7",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\logicalLwcCmp\\logicalLwcCmp.html": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\logicalLwcCmp\\logicalLwcCmp.html",
+    "size": 1788,
+    "modifiedTime": 1648453065539,
+    "changeTime": 1648453065539,
+    "contentHash": "458ebbddcf3bc7ec4ab0d27ccd493205d54ea936",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\logicalLwcCmp\\logicalLwcCmp.js": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\logicalLwcCmp\\logicalLwcCmp.js",
+    "size": 1373,
+    "modifiedTime": 1648451634539,
+    "changeTime": 1648451634539,
+    "contentHash": "d99c1aa4ec052c11710e3b9771bd1582f86ce527",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\logicalLwcCmp\\logicalLwcCmp.js-meta.xml": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\logicalLwcCmp\\logicalLwcCmp.js-meta.xml",
+    "size": 415,
+    "modifiedTime": 1648185389594,
+    "changeTime": 1648185389594,
+    "contentHash": "f148702177f6562404619d5315a39b6c3002f4a7",
+    "isMetadataFile": true,
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\classes\\UtilityClassLwc.cls": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\classes\\UtilityClassLwc.cls",
+    "size": 518,
+    "modifiedTime": 1648198339684,
+    "changeTime": 1648198339684,
+    "contentHash": "ab5795a47bb85821bf792f935407d453b3b04e03",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "ApexClass"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\classes\\UtilityClassLwc.cls-meta.xml": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\classes\\UtilityClassLwc.cls-meta.xml",
+    "size": 174,
+    "modifiedTime": 1648187009952,
+    "changeTime": 1648187009952,
+    "contentHash": "ee69609f665894ae17e9402c666c39f231ba6516",
+    "isMetadataFile": true,
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "ApexClass"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\",
+    "isDirectory": true,
+    "modifiedTime": 1645476391186,
+    "changeTime": 1645476391186,
+    "contentHash": "b28b7af69320201d1cf206ebf28373980add1451",
+    "state": "u",
+    "isArtifactRoot": true,
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactListSearch": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactListSearch",
+    "isDirectory": true,
+    "modifiedTime": 1648459766995,
+    "changeTime": 1648459766995,
+    "contentHash": "797145154912b57dfdca86eb3db26b15d28ad6d1",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\classes\\ContactListSearchController.cls": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\classes\\ContactListSearchController.cls",
+    "size": 826,
+    "modifiedTime": 1648552498717,
+    "changeTime": 1648552498717,
+    "contentHash": "9792c5759295d2ff89b62a1d80f57d10eebb8f9f",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "ApexClass",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\classes\\ContactListSearchController.cls-meta.xml": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\classes\\ContactListSearchController.cls-meta.xml",
+    "size": 174,
+    "modifiedTime": 1648460699967,
+    "changeTime": 1648460699967,
+    "contentHash": "ee69609f665894ae17e9402c666c39f231ba6516",
+    "isMetadataFile": true,
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "ApexClass"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactListSearch\\contactListSearch.html": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactListSearch\\contactListSearch.html",
+    "size": 977,
+    "modifiedTime": 1648627215699,
+    "changeTime": 1648627215699,
+    "contentHash": "6b5f7422bbb4199a875227d0d491f7321c26882a",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactListSearch\\contactListSearch.js": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactListSearch\\contactListSearch.js",
+    "size": 1211,
+    "modifiedTime": 1648553849921,
+    "changeTime": 1648553849921,
+    "contentHash": "be05095e97d2d2d514391272624a2bdb04d066ed",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactListSearch\\contactListSearch.js-meta.xml": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactListSearch\\contactListSearch.js-meta.xml",
+    "size": 455,
+    "modifiedTime": 1648626948744,
+    "changeTime": 1648626948744,
+    "contentHash": "c7111508d395d941c978a5b10bb4e51b10eaee5f",
+    "isMetadataFile": true,
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactRecEditForm": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactRecEditForm",
+    "isDirectory": true,
+    "modifiedTime": 1648698396304,
+    "changeTime": 1648698396304,
+    "contentHash": "26329b28079384f30bd0570950beef1b0048c96e",
+    "state": "u",
+    "package": "force-app"
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactRecEditForm\\contactRecEditForm.html": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactRecEditForm\\contactRecEditForm.html",
+    "size": 858,
+    "modifiedTime": 1648700658776,
+    "changeTime": 1648700658776,
+    "contentHash": "26ad94d7a10ce4213c0e44a3fb89f09951c32c20",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactRecEditForm\\contactRecEditForm.js": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactRecEditForm\\contactRecEditForm.js",
+    "size": 806,
+    "modifiedTime": 1648700891621,
+    "changeTime": 1648700891621,
+    "contentHash": "85d93e187d983449a85c95a210f044d640b8827b",
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle",
+    "deferContentHash": true
+  },
+  "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactRecEditForm\\contactRecEditForm.js-meta.xml": {
+    "sourcePath": "c:\\#CloudOdyssey\\ForVScode\\ForLWC\\force-app\\main\\default\\lwc\\contactRecEditForm\\contactRecEditForm.js-meta.xml",
+    "size": 430,
+    "modifiedTime": 1648700302773,
+    "changeTime": 1648700302773,
+    "contentHash": "dc770bb7a00bbec67c64ff65fa2304bf22ae7f30",
+    "isMetadataFile": true,
+    "state": "u",
+    "package": "force-app",
+    "metadataType": "LightningComponentBundle"
+  }
+}

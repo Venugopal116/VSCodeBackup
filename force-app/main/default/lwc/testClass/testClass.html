@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="MR.A² Calculator" >
+        <div> 
+            <lightning-input type="number" name="first" label="First Number" onchange={handleChange}></lightning-input> 
+            <lightning-input type="number" name="second" label="Second Number" onchange={handleChange}></lightning-input> 
+            <lightning-button variant="brand" label=" + " title="Looks like a link" onclick={handleClick}  class="slds-m-left_x-small"></lightning-button>
+        </div>
+        <p> The Result of Addition :
+             {firstVal}    +    {seconVal} = {result} </p>
+    </lightning-card>
+</template>

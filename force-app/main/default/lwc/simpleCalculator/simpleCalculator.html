@@ -1,0 +1,32 @@
+<template>
+	<lightning-card title="Simple Calculator" icon-name="standard:formula">
+		<lightning-layout multiple-rows>
+			<lightning-layout-item padding="around-medium" size="12">
+				<lightning-input type="number" name="First Number" label="Number 1" onchange={numberChangeHandler}>
+				</lightning-input>
+			</lightning-layout-item>
+
+			<lightning-layout-item padding="around-medium" size="12">
+				<lightning-input type="number" name="Second Number" label="Number 2" onchange={numberChangeHandler}>
+				</lightning-input>
+			</lightning-layout-item>
+
+			<lightning-layout-item padding="around-medium" size="12">
+				<lightning-button-group>
+					<lightning-button label="Add" icon-name="utility:add" icon-position="right" onclick={addHandler}>
+					</lightning-button>
+					<lightning-button label="Substarct" icon-name="utility:dash" icon-position="right" onclick={substHandler}>
+					</lightning-button>
+					<lightning-button label="Mutiply" icon-name="utility:close" icon-position="right" onclick={mltplyHandler}>
+					</lightning-button>
+					<lightning-button label="Divide" icon-name="utility:magicwand" icon-position="right" onclick={divideHandler}>
+					</lightning-button>
+				</lightning-button-group>
+			</lightning-layout-item>
+
+			<p> The Result Is :{currentResult}</p>
+
+
+		</lightning-layout>
+	</lightning-card>
+</template>

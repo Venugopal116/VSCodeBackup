@@ -1,0 +1,12 @@
+{
+  "defaultusername": "CentralOrg",
+  "edition": "Devloper",
+  "features": [],
+  "hasSampleData": true,
+  "settingd": {
+    "orgPreferenceSettings": {
+      "s1DesktopEnabled": true
+    }
+  },
+  "defaultdevhubusername": "VenuGopal"
+}

@@ -1,0 +1,114 @@
+<!-- <template>
+     <lightning-card title="Contact List" icon-name="standard:contact">
+      <lightning-layout vertical-align="center">
+          <lightning-layout-item padding="around-small">
+            <lightning-input label="Find Contact" class="searchKeyBtn"  onchange={handleChange}>
+                 
+
+            </lightning-input>
+            <lightning-button variant="brand" label="Search" onclick={searchHandle}>
+
+            </lightning-button>
+          </lightning-layout-item>
+           <template for:each={contacts} for:item="contact" >
+
+              <lightning-layout-item key={contact.id} padding="around-small">
+                  <p><lightning-formatted-text value={contact.Name} ></lightning-formatted-text></p>
+                  <p><lightning-formatted-email value={contact.Email}></lightning-formatted-email></p>
+                  <p><lightning-formatted-phone value={contact.Phone}></lightning-formatted-phone></p>
+              </lightning-layout-item>
+
+           </template>
+
+      </lightning-layout>
+    </lightning-card> 
+
+</template> -->
+
+<template>
+  <div class="slds-box searchBarBgColor">
+        <p style="text-align: center; font:caption; font-size:25px " class="title"><b>Search Contacts</b></p>
+        
+        <lightning-layout multiple-rows >
+           <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="2">
+        </lightning-layout-item>
+
+        <lightning-layout-item  padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="8">
+            <lightning-input  class="slds-text-heading_medium slds-text-align_center searchKeyButton textProperties labelfontsize" label="" placeholder="Search Contact By Name" >  
+            </lightning-input><!-- class="searchKeyButton" --> <br>
+
+            <lightning-button class="slds-align_absolute-center" variant="brand" label="Search Contacts" onclick={searchHandle}></lightning-button>
+    
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="2">
+        </lightning-layout-item>
+
+      </lightning-layout>
+  </div>
+     <br>
+
+      <!-- title labels starts here -->
+
+      <div class="slds-box searchBarBgColor">
+          
+        <lightning-layout>
+               <lightning-layout-item class="tableLabelProperties conIdTitle" padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3" >
+                <!-- <lightning-formatted-text  value="ID" ></lightning-formatted-text> -->
+                <lightning-input class="titleInputBoxRound" label="" value="ID" disabled="true"></lightning-input>
+               </lightning-layout-item>
+
+               <lightning-layout-item class="tableLabelProperties conNameTitle" padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3">
+                <!-- <lightning-formatted-text value="Contact Name" ></lightning-formatted-text> -->
+                <lightning-input class="titleInputBoxRound" label="" value="Contact Name" disabled="true"></lightning-input>
+               </lightning-layout-item>
+
+               <lightning-layout-item class="tableLabelProperties phoneLabelTitle" padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3" >
+                <!-- <lightning-formatted-text value="Phone Number"></lightning-formatted-text> -->
+                <lightning-input class="titleInputBoxRound" label="" value="Phone Number" disabled="true"></lightning-input>
+               </lightning-layout-item>
+
+               <lightning-layout-item class="tableLabelProperties emailLabelTitle" padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3" >
+                <!-- <lightning-formatted-text  value="Email" ></lightning-formatted-text> -->
+                <lightning-input class="titleInputBoxRound" label="" value="Email" disabled="true"></lightning-input>
+               </lightning-layout-item>    
+               
+        </lightning-layout>  
+     </div>
+     <!-- title labels ends here -->
+     
+      <!-- fetching data from here -->
+      <template for:each={contacts} for:item="contact">
+        <div key={contact.id}>
+           <div class="slds-box searchBarBgColor" padding="around-small">
+               
+               <lightning-layout>
+                   <lightning-layout-item class="conIdTitle accResultTextProps" padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3">
+                       <!-- <lightning-formatted-text value={contact.Id}></lightning-formatted-text> -->
+                       <lightning-input class="titleInputBoxRound inputboxcolor" label="" value={contact.Id} disabled="true"></lightning-input>
+                      </lightning-layout-item>
+   
+                      <lightning-layout-item class="conNameTitle accResultTextProps"  padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3">
+                       <!-- <lightning-formatted-phone value={contact.Name} ></lightning-formatted-phone> -->
+                       <lightning-input class="titleInputBoxRound inputboxcolor" label="" value={contact.Name} disabled="true"></lightning-input>
+                      </lightning-layout-item>
+
+                      <lightning-layout-item class="phoneLabelTitle accResultTextProps"  padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3">
+                        <!-- <lightning-formatted-text value={contact.Phone}></lightning-formatted-text> -->
+                        <lightning-input class="titleInputBoxRound inputboxcolor" label="" value={contact.Phone} disabled="true"></lightning-input>
+                       </lightning-layout-item>
+   
+                      <lightning-layout-item class="emailLabelTitle accResultTextProps"  padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3">
+                       <!-- <lightning-formatted-text value={contact.Email}></lightning-formatted-text> -->
+                       <lightning-input class="titleInputBoxRound inputboxcolor" label="" value={contact.Email} disabled="true"></lightning-input>
+                      </lightning-layout-item>    
+   
+               </lightning-layout>
+           </div>
+        </div>
+   
+          
+   
+           </template>
+
+</template>

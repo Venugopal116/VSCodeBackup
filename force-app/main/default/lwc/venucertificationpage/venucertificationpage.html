@@ -1,0 +1,52 @@
+<template>
+    <lightning-card  title="Certification Page">
+         
+    
+    
+    <template if:true={showSpinner}>
+        <div>
+            <lightning-spinner variant="brand" alternative-text="Loading" size="large"></lightning-spinner>
+        </div>
+    </template>
+    <div class="slds-grid slds-grid_align-center slds-p-bottom_large">
+        <div class="slds-col slds-size_1-of-4 slds-var-p-horizontal_medium">
+            <lightning-combobox name="Certification__c"
+                                label="Certificate Name"
+                                value
+                                placeholder="Select Certification"
+                                options={certificationMaster}
+                                onchange={handleCertificationSelection}>
+            </lightning-combobox>
+        </div>
+        <div class="slds-col slds-size_1-of-4 slds-var-p-horizontal_medium">
+            <lightning-input required type="date" label="Certification Completion Date" value="CertificationDate"
+                            data-name='completionDate' onchange={updateCerficateDate}>
+            </lightning-input>
+        </div>
+        <div class="slds-col slds-size_2-of-6 slds-var-p-horizontal_medium slds-var-p-top_large">
+            <lightning-button name="AddCertificate" onclick={addCertificate} label="Add Certificate"
+                                variant="brand" icon-name="utility:add" icon-position="left">
+            </lightning-button>
+        </div>
+    </div>
+    <div class="slds-border_top slds-var-p-bottom_large"></div>
+    <div class="slds-grid slds-wrap">
+        <template for:each={certificationList} for:item="cert" for:index="index">
+            <div class="slds-col slds-size_1-of-3 slds-var-p-around_small" key={cert.Name}>
+                <lightning-card>
+                    <div class="slds-grid">
+                        <div class="slds-var-p-left_xx-small"><img src={salesforceLogo} height="100px" width="100px"></img></div>
+                        <div class="slds-col_bump-right"><h3>{cert.Name}</h3></div>
+                        <div class="slds-var-p-right_xx-small">
+                            <lightning-button-icon label="Delete" title="Delete" icon-name="utility:delete" 
+                                                    slot="actions" data-id={index} onclick={deleteCertificate}>
+                            </lightning-button-icon>
+                        </div>
+                    </div>
+                    <lightning-formatted-date-time class="slds-var-p-horizontal_small" ></lightning-formatted-date-time>
+                </lightning-card>
+            </div>
+        </template>
+    </div>
+    </lightning-card>
+</template>

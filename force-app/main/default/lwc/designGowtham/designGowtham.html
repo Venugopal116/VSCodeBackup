@@ -1,0 +1,79 @@
+<template>
+ <lightning-card>
+    <div class="slds-box">
+       <lightning-layout multiple-rows="true">
+           <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4">
+               <lightning-input type="text" title="First Name" label="First Name"></lightning-input>
+           </lightning-layout-item>
+
+           <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4" class="slds-p-around_small">
+            <lightning-input type="text" title="type Last Name here" label="Last Name" read-only></lightning-input>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4"  class="slds-p-around_small">
+            <lightning-input type="Number" title="Phone" label="Phone Number"></lightning-input>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" small-device-size=
+        "12" medium-device-size="6" large-device-size="4"  class="slds-p-around_small">
+            <lightning-input type="date" title="date" label="D.O.B"></lightning-input>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4"  class="slds-p-around_small">
+            <lightning-input type="Number" title="Phone" label="Phone Number" disabled="true"></lightning-input>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4"  class="slds-p-around_small">
+            <lightning-input type="email" title="Email" label="Email"></lightning-input>
+        </lightning-layout-item>
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////- -->
+
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4"  class="slds-p-around_small">
+            <lightning-input type="datetime" name="input5" label="Date Time field with min and max values" value="2020-09-12T18:13:41Z" min="2020-08-03T08:20:44Z" max="2020-09-25T22:33:44Z" ></lightning-input>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4"  class="slds-p-around_small">
+            <lightning-input type="checkbox" label="Required option" name="input2" checked required></lightning-input>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4"  class="slds-p-around_small">
+            <lightning-input type="toggle" label="Required option" name="input2" checked required></lightning-input>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4"  class="slds-p-around_small">
+            <lightning-input
+            name="enter-search"
+            label="Search when user hits the 'enter' key"
+            type="search"
+               ></lightning-input>        
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4"  class="slds-p-around_small">
+            <lightning-input type="color" name="input-color" label="Favorite color" value="#8DC141"></lightning-input>       
+         </lightning-layout-item>
+
+         <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4"  class="slds-p-around_small">
+            <lightning-input type="file" label="Attachment" required message-when-value-missing="Please upload a file"></lightning-input>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4"  class="slds-p-around_small">
+
+        <div class="slds-popover slds-popover_tooltip slds-nubbin_bottom-left" role="tooltip" id="help" style="position:absolute;top:-4px;left:15px">
+            <div class="slds-popover__body">Help Text.
+              <div class="slds-m-top_xxx-small" aria-hidden="true">Click
+                <span class="slds-icon_container slds-icon-utility-info" title="Help">
+                  <svg class="slds-icon slds-icon slds-icon_xx-small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#info"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Help</span>
+                </span> to learn more.</div>
+            </div>
+          </div>
+        </lightning-layout-item>
+
+
+       </lightning-layout>
+    </div>
+ </lightning-card>  
+   
+</template>

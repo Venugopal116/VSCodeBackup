@@ -1,0 +1,94 @@
+<template>
+
+    <!-- ************************** wire to property (Start) ******************************* -->
+    <lightning-card>
+        <template if:true={ACCOUNTS}>
+            <template for:each={ACCOUNTS.data} for:item="ACC">
+                <lightning-layout-item key={acc.id}>
+                    <p>ACC.name</p>
+                    <p>Acc.industry</p>
+                    <p>Acc.Phone</p>
+                </lightning-layout-item>
+            </template>
+        </template>
+    </lightning-card>
+    <!-- ************************** wire to property (End) ******************************* -->
+
+    <!-- ************************** wire to Method (Start) ******************************* -->
+    <lightning-card>
+        <template if:true={Accounts}>
+            <template for:each={Contacts} for:item="con">
+                <lightning-layout-item key={con.id}>
+                    <p> con.lastname</p>
+                    <p> con.phone</p>
+                    <p> con.email</p>
+                </lightning-layout-item>
+            </template>
+        </template>
+    </lightning-card>
+    <!-- ************************** wire to Method (End) ******************************* -->
+
+    <!-- ************************** wire to Method (Start)==={Passing Parameter} ******************************* -->
+    <lightning-card>
+
+        <lightning-layout-item>
+            <!-- search input and Button here (below) -->
+            <lightning-input class="srchInput" label="Search by Contact Name" placeholder="Enter contact yto search">
+            </lightning-input>
+            <lightning-button label="Search Contacts" onclick={searchClickhandler}></lightning-button>
+        </lightning-layout-item>
+
+        <template if:true={ContactsList}>
+            <template for:each={ContactsList} for:item="Contact">
+                <lightning-layout-item key={contact.id}>
+                    <p> Contact.lastname</p>
+                    <p> Contact.phone</p>
+                    <p> Contact.email</p>
+                </lightning-layout-item>
+            </template>
+        </template>
+    </lightning-card>
+    <!-- ************************** wire to Method (End)==={Passing Parameter} ******************************* -->
+
+    <!-- ************************** Imperative Method (start) ******************************* -->
+    <lightning-card title="ApexImperativeMethod" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <p class="slds-m-bottom_small">
+                <lightning-button label="Load Contacts" onclick={handleLoad}></lightning-button>
+            </p>
+            <template if:true={contacts}>
+                <template for:each={contacts} for:item="contact">
+                    <p key={contact.Id}>{contact.Name}</p>
+                </template>
+            </template>
+            <template if:true={error}>
+                <c-error-panel errors={error}></c-error-panel>
+            </template>
+        </div>
+    </lightning-card>
+    <!-- ************************** Imperative Method (End) ******************************* -->
+    
+    <!-- ************************** Imperative Method (start)==={Passing Parameter} ******************************* -->
+
+    <lightning-card title="ApexImperativeMethod" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <p class="slds-m-bottom_small">
+                <lightning-input class="srchInput" label="Search by Contact Name" placeholder="Enter contact yto search" >
+                </lightning-input>
+                <lightning-button label="Search Contacts" onclick={handleClick}></lightning-button>
+            </p>
+            <template if:true={contsList}>
+                <template for:each={contsList} for:item="contact">
+                    <p key={contact.Id}>{contact.Name}</p>
+                </template>
+            </template>
+            <template if:true={error2}>
+                <c-error-panel errors={error2}></c-error-panel>
+            </template>
+        </div>
+    </lightning-card>
+
+
+    <!-- ************************** Imperative Method (End)==={Passing Parameter} ******************************* -->
+
+</template>

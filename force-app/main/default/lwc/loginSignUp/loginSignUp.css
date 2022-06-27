@@ -1,0 +1,35 @@
+.mainclass{
+    background-image: url("loginbg.jpg");
+}
+
+.textInput{
+    -webkit-text-fill-color: rgba(4, 25, 88, 0.882);
+}
+
+.buttonColor{
+    --slds-c-button-brand-color-background:#0ac7d8;
+}
+
+lightning-button.buttonClr{ 
+
+    --sds-c-button-brand-color-background: hsl(0, 4%, 18%);
+
+    --sds-c-button-text-color: #ffffff;
+
+}
+
+.THIS .textColorInput{
+    color: Black;
+    font-weight: bold;
+    background-color: #242222;
+}
+
+.inputboxcolor{
+    --slds-c-input-color-background:#b3b3b3;
+    --slds-c-input-radius-border:24rem;
+}
+lightning-button.signupButtonclr{
+    --sds-c-button-brand-color-background: hsl(0, 4%, 18%);
+
+    --sds-c-button-text-color: #ffffff;
+}

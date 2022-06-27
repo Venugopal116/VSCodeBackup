@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="ApexWireMethodToProperty" icon-name="custom:custom 63">
+        <div class="slds-var-m-around_medium">
+            <template  if:true={contacts.data}>
+                <template for:each={contacts.data} for:item="cont">
+                    <p key={cont.id}>{cont.name}</p>
+                </template>
+            </template>
+                <template if:true={contacts.error}>
+                    <c-error-panel errors={contacts.error}></c-error-panel>
+                </template>
+            
+        </div>
+    </lightning-card>
+    
+</template>

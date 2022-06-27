@@ -1,0 +1,266 @@
+<template>
+
+    <!-- ************************** wire to property (Start) ******************************* -->
+    <lightning-card>
+        <template if:true={ACCOUNTS}>
+            <template for:each={ACCOUNTS.data} for:item="ACC">
+                <lightning-layout-item key={acc.id}>
+                    <p>ACC.name</p>
+                    <p>Acc.industry</p>
+                    <p>Acc.Phone</p>
+                </lightning-layout-item>
+            </template>
+        </template>
+    </lightning-card>
+    <!-- ************************** wire to property (End) ******************************* -->
+
+    <!-- ************************** wire to Method (Start) ******************************* -->
+    <lightning-card>
+        <template if:true={Accounts}>
+            <template for:each={Contacts} for:item="con">
+                <lightning-layout-item key={con.id}>
+                    <p> con.lastname</p>
+                    <p> con.phone</p>
+                    <p> con.email</p>
+                </lightning-layout-item>
+            </template>
+        </template>
+    </lightning-card>
+    <!-- ************************** wire to Method (End) ******************************* -->
+
+    <!-- ************************** wire to Method (Start)==={Passing Parameter} ******************************* -->
+    <lightning-card>
+
+        <lightning-layout-item>
+            <!-- search input and Button here (below) -->
+            <lightning-input class="srchInput" label="Search by Contact Name" placeholder="Enter contact yto search">
+            </lightning-input>
+            <lightning-button label="Search Contacts" onclick={searchClickhandler}></lightning-button>
+        </lightning-layout-item>
+
+        <template if:true={ContactsList}>
+            <template for:each={ContactsList} for:item="Contact">
+                <lightning-layout-item key={contact.id}>
+                    <p> Contact.lastname</p>
+                    <p> Contact.phone</p>
+                    <p> Contact.email</p>
+                </lightning-layout-item>
+            </template>
+        </template>
+    </lightning-card>
+    <!-- ************************** wire to Method (End)==={Passing Parameter} ******************************* -->
+
+    <!-- ************************** Imperative Method (start) ******************************* -->
+    <lightning-card title="ApexImperativeMethod" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <p class="slds-m-bottom_small">
+                <lightning-button label="Load Contacts" onclick={handleLoad}></lightning-button>
+            </p>
+            <template if:true={contacts}>
+                <template for:each={contacts} for:item="contact">
+                    <p key={contact.Id}>{contact.Name}</p>
+                </template>
+            </template>
+            <template if:true={error}>
+                <c-error-panel errors={error}></c-error-panel>
+            </template>
+        </div>
+    </lightning-card>
+    <!-- ************************** Imperative Method (End) ******************************* -->
+    
+    <!-- ************************** Imperative Method (start)==={Passing Parameter} ******************************* -->
+
+    <lightning-card title="ApexImperativeMethod" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <p class="slds-m-bottom_small">
+                <lightning-input class="srchInput" label="Search by Contact Name" placeholder="Enter contact yto search" >
+                </lightning-input>
+                <lightning-button label="Search Contacts" onclick={handleClick}></lightning-button>
+            </p>
+            <template if:true={contsList}>
+                <template for:each={contsList} for:item="contact">
+                    <p key={contact.Id}>{contact.Name}</p>
+                </template>
+            </template>
+            <template if:true={error2}>
+                <c-error-panel errors={error2}></c-error-panel>
+            </template>
+        </div>
+    </lightning-card>
+
+
+    <!-- ************************** Imperative Method (End)==={Passing Parameter} ******************************* -->
+
+</template>
+
+=====================================================================================================================
+
+import { LightningElement,wire,track } from 'lwc';
+import ACCOUNTS from '@salesforce/apex/AccountController.getAccountList';
+import CONLISTDATA from '@salesforce/apex/ContactLwcController_G.getContacts';
+import getContactList from '@salesforce/apex/ContactController.getContactList';
+import findContacts from '@salesforce/apex/ContactController.findContacts';
+export default class DummyCmp extends LightningElement {
+
+   //***************************** wire to property ********************************
+
+    @wire (ACCOUNTS) accs;   // reg: wire to property
+
+ //*********************************// wire to Method //************************************************ */
+    Contacts;                   //reg: wire to Method  //Global level variabels(2),need to declare at start
+    error;                      //reg: wire to Method     
+
+    @wire(CONLISTDATA)          //reg: wire to Method (Function)
+
+    wiredContacts({error,data}){
+        if(data){
+
+            this.contacts=data;
+            console.JSON.stringify('Contacts data-------------> ',this.contacts);
+        }
+        if(error){
+
+            this.error=error;
+            console.log('-------error is------------> ',this.error);
+        }
+    }
+
+ //-**********************************// wire to Method- with passing parameter //************************ */
+
+    ContactsList;   //reg: wire to Method with passing parameter   //Global level variabels(3),need to declare at start
+    err;      //reg: wire to Method with passing parameter
+    searchKey;  //reg: wire to method with passing parameter
+
+   @wire (CONLISTDATA,{searhKey : '$searchkey'})    // reg: wire to method (Function) --->passing Parameter
+
+   wiredConlist({error,data}){
+    if(data){
+        this.ContactsList=data;
+        console.JSON.stringify('Contacts data-------------> ',this.ContactsList);
+    }
+    if(error){
+        this.err=error;
+        console.log('-------error is------------> ',this.err);
+    }
+   }
+
+   searchHandleChange(event){   // to handle input changed
+    this.searhKey=event.target.value;
+   }
+
+   searchClickhandler(){  // to handle click action
+    this.searchKey=this.template.querySelector('.srchInput');
+   }
+
+    //************************ Imperative Method ********************************************** */
+
+    @track contacts;
+    @track errorr;
+
+    handleLoad() {
+
+        getContactList()       
+            .then(result => {
+                this.contacts = result;
+            })
+            .catch(error => {
+                this.error = error;
+            });
+    }
+    //************************ Imperative Method with (passing Parameter)  ********************* */
+
+    serchKey='';
+    contsList;
+    error2;
+
+    handleinputChange(){
+        this.serchKey=this.template.querySelector('.srchInput');
+    }
+    handleClick(){
+        findContacts({searchKey : this.serchKey})
+        .then(result=>{
+            if(result){
+                this.contsList=result;
+                this.error2=undefined;
+            }
+        })
+        .catch(error=>{
+            if(error){
+                this.error2=error;
+                this.contsList=undefined;
+            }
+        })
+    }
+
+
+}
+
+=================================================================================
+
+
+public with sharing class ContactLwcController_G {
+ 
+    @AuraEnabled(cacheable=true)
+   
+    public static List<Contact> getContacts(){
+  
+      list<Contact>conList=new List<Contact>();
+      conList=[SELECT id,Name,Phone,Email FROM Contact  WITH SECURITY_ENFORCED
+      LIMIT 10]; 
+      return conList;
+  
+    }
+    @AuraEnabled(cacheable=true)
+    public static List<Contact> getcontactList (){
+      return [
+            SELECT
+            Id,
+            Name,
+            FirstName,
+            LastName,
+            Title,
+            Phone,
+            Email
+            FROM Contact  WITH SECURITY_ENFORCED
+            LIMIT 10
+    ];
+    }
+  
+    @AuraEnabled
+    public static void verifyUser(string username,string password){//string name
+      
+      List<Contact> verifyConList = [SELECT id,Name,Phone,Email FROM Contact WHERE Email =:username AND Phone=:password];
+  
+         if(verifyConList.size()>0){
+          return true;
+         }
+        
+    }
+  
+    @AuraEnabled(cacheable=true)
+    public static List<Contact> getContactList() {
+        return [
+            SELECT Id, Name, Title, Phone, Email, Picture__c
+            FROM Contact
+            WHERE Picture__c != NULL
+            WITH SECURITY_ENFORCED
+            LIMIT 10
+        ];
+    }
+  
+    @AuraEnabled(cacheable=true)
+    public static List<Contact> findContacts(String searchKey) {
+        String key = '%' + searchKey + '%';
+        return [
+            SELECT Id, Name, Title, Phone, Email, Picture__c
+            FROM Contact
+            WHERE Name LIKE :key AND Picture__c != NULL
+            WITH SECURITY_ENFORCED
+            LIMIT 10
+        ];
+    }
+  }
+
+  
+  ==========================================================================================
+

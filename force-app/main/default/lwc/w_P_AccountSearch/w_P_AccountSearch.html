@@ -1,0 +1,105 @@
+<template>
+    <div class="slds-box searchBarBgColor">
+        <p style="text-align: center; font:caption; font-size:25px"><b>Find Accounts</b></p>
+                    <br>
+        
+        <lightning-layout multiple-rows >
+           <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="2">
+              </lightning-layout-item>
+
+        <lightning-layout-item  padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="8">
+            <lightning-input  class="slds-text-heading_medium slds-text-align_center searchKeyButton textProperties labelfontsize" label="" placeholder="Enter Account Name/Phone" >
+                
+            </lightning-input><!-- class="searchKeyButton" --> <br>
+
+            <lightning-button class="slds-align_absolute-center" variant="brand" label="Search Accounts" onclick={searchHandle}></lightning-button>
+    
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="2">
+        </lightning-layout-item>
+      </lightning-layout>
+    </div>
+     <br>
+
+      <!-- title labels starts here -->
+
+     <div class="slds-box searchBarBgColor">
+        <lightning-layout>
+            <lightning-layout-item class="tableLabelProperties accountLabelTitle" padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3">
+                <lightning-formatted-text  value="Account Name" ></lightning-formatted-text>
+               </lightning-layout-item>
+
+               <lightning-layout-item class="tableLabelProperties phoneLabelTitle" padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3" >
+                <lightning-formatted-text value="Phone Number"></lightning-formatted-text>
+               </lightning-layout-item>
+
+               <lightning-layout-item class="tableLabelProperties IndustryLabelTitle" padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3" >
+                <lightning-formatted-text  value="Industry" ></lightning-formatted-text>
+               </lightning-layout-item>
+
+               <lightning-layout-item class="tableLabelProperties emptyTitle" padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3" >
+                <lightning-formatted-text  value="Website" ></lightning-formatted-text>
+               </lightning-layout-item>
+               
+        </lightning-layout>
+        
+        
+     </div>
+     <!-- title labels ends here -->
+
+            <!-- fetching data from here -->
+        <template for:each={accounts.data} for:item="acc">
+     <div key={acc.id}>
+        <div class="slds-box searchBarBgColor" padding="around-small">
+            
+            <lightning-layout>
+                <lightning-layout-item class="accountLabelTitle accResultTextProps" padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3">
+                    <lightning-formatted-text value={acc.Name}></lightning-formatted-text>
+                   </lightning-layout-item>
+
+                   <lightning-layout-item class="phoneLabelTitle accResultTextProps"  padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3">
+                    <lightning-formatted-phone value={acc.Phone} ></lightning-formatted-phone>
+                   </lightning-layout-item>
+
+                   <lightning-layout-item class="IndustryLabelTitle accResultTextProps"  padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3">
+                    <lightning-formatted-text value={acc.Industry}></lightning-formatted-text>
+                   </lightning-layout-item>
+
+                   <lightning-layout-item class="emptyTitle accResultTextProps"  padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="3">
+                    <lightning-formatted-text value=''></lightning-formatted-text>, 
+                   </lightning-layout-item>
+
+            </lightning-layout>
+        </div>
+     </div>
+
+       
+
+        </template>
+                      <!-- this below code is previous code -->
+    
+     <!-- <lightning-card title="Account List" icon-name="standard:Account">
+      <lightning-layout vertical-align="center">
+          <lightning-layout-item padding="around-small">
+            <lightning-input label="Find Account" class="searchKeyButton" >
+
+            </lightning-input>
+            <lightning-button variant="brand" label="Search" onclick={searchHandle}>
+
+            </lightning-button>
+          </lightning-layout-item>
+           <template for:each={accounts.data} for:item="acc">
+
+              <lightning-layout-item key={acc.key}  padding="around-small" >
+                  <p><lightning-formatted-text value={acc.Name}></lightning-formatted-text></p>
+                  <p><lightning-formatted-text value={acc.Industry}></lightning-formatted-text></p>
+                  <p><lightning-formatted-phone value={acc.Phone} ></lightning-formatted-phone></p>
+              </lightning-layout-item>
+
+           </template>
+
+      </lightning-layout>
+     </lightning-card> -->
+    
+</template>

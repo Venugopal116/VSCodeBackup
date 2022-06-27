@@ -1,0 +1,40 @@
+<template>
+   
+    <lightning-card title="Play with Toast " icon-name="custom:custom19">
+        <div class="slds-var-p-around_small">
+        <lightning-input  label="Suggest One Toast TITLE here" name="ToastTitle" placeholder="Hey,Im Toast Title" onchange={titleChangeHandler}> 
+
+        </lightning-input>
+
+        <lightning-input label="suggest one Toast MESSAGE here" name="toastMessage" placeholder="Hey Im Toasat Message" onchange={messageChangeHandler}> </lightning-input>
+            
+        <lightning-combobox
+            label="Choose Desired Toast"
+            value={variant}
+            onchange={toastVarientOptionHandler}
+            options={variantOptions}>               
+        </lightning-combobox>
+        <p></p>
+        <p></p>
+     <div class="slds-var-p-around_medium"> 
+        <lightning-button variant="brand" label="Hey click me,I will blast a TOAST for you" onclick={showToastButtonClickHandler}>
+
+        </lightning-button>
+     </div> 
+
+     <lightning-radio-group name="radioGroup"
+     label="Radio Toast"
+     options={variantOptions}
+     value={variant}
+     onchange={radioToastHandler}
+     type="radio"></lightning-radio-group>
+
+      <!-- <template if:true={isOption1} onclick= {successRadioToastHandler}>                
+         
+    </template> -->
+    <!-- onclick={radioToastHandler} -->
+    </div>
+    </lightning-card>
+
+    
+</template>

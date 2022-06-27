@@ -1,0 +1,8 @@
+<template>
+    <lightning-button label="Get Child" variant="Brand" onclick={handleChange}></lightning-button>
+    <template if:true={showChild}> 
+        <c-c-cmp></c-c-cmp>    
+        
+    </template>
+    <p>Hey Buddy Im parent Component,im from HTML file</p>
+</template>

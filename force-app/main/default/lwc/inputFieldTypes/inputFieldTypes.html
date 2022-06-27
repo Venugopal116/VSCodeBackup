@@ -1,0 +1,74 @@
+<template>
+<lightning-card title="Input Fields">
+    <lightning-layout>
+        <lightning-layout-item size="6" padding="around-small">
+            <lightning-card title="Types Of Input Fields">
+                <lightning-input name="Text Field" label="Text Field" type="text" ></lightning-input>
+                <lightning-input name="phone" type="Phone Field" label="Phone"  ></lightning-input>
+                <lightning-input name="Website" type="url" label="Website Field" ></lightning-input>
+                <lightning-input type="date" name="input1" label="Enter a date" ></lightning-input>
+            </lightning-card>
+
+            <lightning-card title="Date Fields">
+                <lightning-input type="date" name="input1" label="Enter a date" ></lightning-input>
+                <lightning-input type="date" name="input2" label="Date field with a predefined value" value="2020-09-07"></lightning-input>
+                <lightning-input type="date" name="input3" label="Date field with ISO8601 formatted value" value="2020-09-07T00:00:00Z"></lightning-input>
+                <lightning-input type="date" name="input4" label="Date field with placeholder" placeholder="type here..."></lightning-input>
+            </lightning-card>
+
+            <lightning-card title="Date and TimeFields">
+                <lightning-input type="datetime" name="input1" label="Enter a date/time value" ></lightning-input>
+                <lightning-input type="datetime" name="input2" label="Date Time field with a predefined value" value="2020-09-12T18:13:41Z"></lightning-input>
+                <lightning-input type="datetime" name="input3" label="Required Date Time field" required value="2020-09-12T18:13:41Z" ></lightning-input>
+                <lightning-input type="datetime" name="input4" label="Disabled Date Time field" disabled value="2020-09-12T18:13:41Z" ></lightning-input>
+                <lightning-input type="datetime" name="input5" label="Date Time field with min and max values" value="2020-09-12T18:13:41Z" min="2020-08-03T08:20:44Z" max="2020-09-25T22:33:44Z" ></lightning-input>
+            </lightning-card>
+
+            <lightning-card title="Date and TimeFields">
+               <lightning-input type="time" name="input1" label="Enter a time"></lightning-input>
+               <lightning-input type="time" name="input2" label="Time field with a predefined value"
+                         value="18:30:00.000Z"></lightning-input>
+              <lightning-input type="time" name="input3" label="Time field with placeholder"
+                         placeholder="type here..."></lightning-input>
+            </lightning-card>
+
+            <lightning-card title="Date and TimeFields">
+                <lightning-input type="checkbox" label="Basic option" name="input1"></lightning-input>
+                <lightning-input type="checkbox" label="Required option" name="input2" checked required></lightning-input>
+                <lightning-input type="checkbox" label="Disabled option" name="input3" checked disabled></lightning-input>
+            </lightning-card>
+
+            <lightning-card title="Toggle">
+                <lightning-input type="toggle" label="Basic option" name="input1"></lightning-input>
+                <lightning-input type="toggle" label="Required option" name="input2" checked required></lightning-input>
+                <lightning-input type="toggle" label="Disabled option" name="input3" checked disabled></lightning-input>
+            </lightning-card>
+
+            <lightning-card title="Search Input">
+                <lightning-input
+            name="enter-search"
+            label="Search when user hits the 'enter' key"
+            type="search"
+               ></lightning-input>
+
+            </lightning-card>
+
+            <lightning-card title="Search Input">
+                <lightning-input type="color" name="input-color" label="Favorite color"></lightning-input>
+                <lightning-input type="color" name="input-color" label="Favorite color" value="#8DC141"></lightning-input>
+            </lightning-card>
+
+            <lightning-card title="Search Input">
+                <lightning-input type="file" label="Attachment"></lightning-input>
+                <lightning-input type="file" label="Attachments"></lightning-input>
+                <lightning-input type="file" label="Attachment" required message-when-value-missing="Please upload a file"></lightning-input>
+                <lightning-input type="file" label="Attachment" disabled></lightning-input>
+                <lightning-input type="file" label="Attachment" accept="image/png, image/jpg, .zip"></lightning-input>
+
+            </lightning-card>
+
+        </lightning-layout-item>            
+            
+    </lightning-layout>
+</lightning-card> 
+</template>

@@ -1,0 +1,99 @@
+.textProperties{
+    color: Black;
+    font-weight:bolder;
+    font-size:20px !important;
+    /* background-color: #000000; */
+    text-align: center;
+    --slds-c-input-color-background:#f5f5f5;
+    --slds-c-input-radius-border:24rem;
+    
+}
+.title{
+    color: rgb(255, 255, 255);
+    font-style: oblique;
+}
+
+.tableLabelProperties{
+    color: Black;
+    font-weight:bolder;
+    font-size:15px !important;
+    
+}
+
+.searchBarBgColor{
+    background-color: #395f8b; 
+}
+.conIdTitle{
+    background-color: #314d82;
+}
+.conNameTitle{
+    background-color: #2b376b;
+}
+.phoneLabelTitle{
+    background-color: #3e417b;
+}
+.emailLabelTitle{
+    background-color: #51517d;
+}
+/* --------------------------------------------------------------------------- */
+
+.MconIdTitle{
+    background-color: #314d82;
+}
+.MconNameTitle{
+    background-color: #2b376b;
+}
+.MphoneLabelTitle{
+    background-color: #3e417b;
+}
+.MemailLabelTitle{
+    background-color: #51517d;
+}
+/* --------------------------------------------------------------------------- */
+
+
+.accResultTextProps{
+    color: Black;
+    font-weight:bolder;
+}
+
+.titleInputBoxRound{
+    --slds-c-input-radius-border:25rem;
+    color: Black;
+    font-weight:bold;
+}
+
+ /* //----------------------------------------------------------------------------------------------------- */
+
+
+.textInput{
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.882);
+}
+
+.buttonColor{
+    --slds-c-button-brand-color-background:#0ac7d8;
+}
+
+lightning-button.buttonClr{ 
+
+    --sds-c-button-brand-color-background: hsl(0, 4%, 18%);
+
+    --sds-c-button-text-color: #ffffff;
+
+}
+
+.THIS .textColorInput{
+    color: Black;
+    font-weight: bold;
+    background-color: #242222;
+}
+
+.inputboxcolor{
+    --slds-c-input-color-background:#0d0d0d;
+    --slds-c-input-radius-border:24rem;
+}
+lightning-button.signupButtonclr{
+    --sds-c-button-brand-color-background: hsl(0, 4%, 18%);
+
+    --sds-c-button-text-color: #ffffff;
+}

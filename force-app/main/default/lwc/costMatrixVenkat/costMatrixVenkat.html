@@ -1,0 +1,39 @@
+<template>
+
+    <div class="slds-box">
+        <p style="text-align:left; font:caption; font-size:12px"><b>Product</b></p>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size=" ">
+                <lightning-input label="" placeholder="Type Of cloud" title="shown Type of cloud here"></lightning-input>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="2">
+                <lightning-combobox
+                name="selfevalution"
+                label="Self-Evalution"
+                value={value}
+                placeholder="Select Progress"
+                options={options}
+                onchange={handleChange} required ></lightning-combobox>
+            </lightning-layout-item>
+
+        
+
+        
+            <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="2">
+               
+            </lightning-layout-item>
+
+       
+
+       
+            <lightning-layout-item padding="around-small" size="12" small-device-size="12" medium-device-size="6" large-device-size="2">
+                
+            </lightning-layout-item>
+
+        </lightning-layout>
+
+        
+     </div>
+    
+</template>

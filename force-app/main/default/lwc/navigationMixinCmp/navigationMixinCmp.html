@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Navigation Mixin Examples" icon-name="utility:checkin" >
+ <lightning-button-group>
+        <div class="slds-p-around_medium">
+        <lightning-button variant="brand" label="New Account" onclick={actionToCreateAccountNavigation}></lightning-button>
+      </div>
+      <div class="slds-p-around_medium">
+        <lightning-button variant="brand" label="Account List View" onclick={actionToAccountListViewNavigation}></lightning-button>
+    </div>
+    <div class="slds-p-around_medium">
+        <lightning-button variant="brand" label="Contact Home" onclick={actionToContactHomeNav}></lightning-button>
+    </div>
+
+    <div class="slds-p-around_medium">
+        <lightning-button variant="brand" label="Con Relate Account" onclick={navigateToContactRelatedList}></lightning-button>
+    </div>
+    <div class="slds-p-around_medium">
+        <lightning-button variant="brand" label="HomePageNav" onclick={navigateToHomePage}></lightning-button>
+    </div>
+    <div class="slds-p-around_medium">
+        <lightning-button variant="brand" label="Reports" onclick={navigateToReports}></lightning-button>
+    </div>
+    <div class="slds-p-around_medium">
+        <lightning-button variant="brand" label="Learn NAVmixin" onclick={navigateToWebPage}></lightning-button>
+    </div>
+</lightning-button-group>
+
+    </lightning-card>
+    
+</template>

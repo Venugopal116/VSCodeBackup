@@ -1,0 +1,116 @@
+<template>
+    <!-- <template if:true={showSignUpPage}>
+        <c-sign-up></c-sign-up>
+    </template> -->
+    <div style="background-color:black;">
+
+        <div class="slds-grid slds-wrap" style={BackgroundImage}>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_4-of-12">
+                <template if:true={showInfoPage}>
+
+                    <div class="slds-box" style="height: 80vh;">
+                        <p style="text-align: center; font:caption; font-size:larger"><b>Password Recovery</b></p>
+                        <br>
+                        <lightning-layout multiple-rows="true" class="slds-align_absolute-center">
+                            <lightning-layout-item>
+                                <lightning-input style="-webkit-text-fill-color:#000000" class="inputboxcolor"
+                                    type="email" label="Enter Your Registered Email Here"
+                                    title="Enter Your Registered Email Here" placeholder="Enter Registered mail">
+                                </lightning-input>
+                                <br>
+                                <lightning-button class="slds-align_absolute-center buttonClr" variant="brand"
+                                    label="Send Verification Code" title="Verify"></lightning-button>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+
+
+                </template>
+            </div>
+            <div
+                class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_4-of-12  slds-p-horizontal_medium">
+                <div class="slds-box" style="height: 80vh;">
+                    <p style="text-align: center; font:caption; font-size:larger"><b>Login Here</b></p>
+                    <br>
+                    <lightning-layout multiple-rows="true" class="slds-align_absolute-center">
+
+                        <lightning-layout-item>
+                            <lightning-input style="-webkit-text-fill-color:#000000" type="text" label="Username"
+                                title="Enter your Registered mail Or Username" name="username"
+                                placeholder="Enter username" class="inputboxcolor usrName" onchange={username}></lightning-input>
+
+                            <br>
+                            <lightning-input style="-webkit-text-fill-color:#000000" class="inputboxcolor pswrd"
+                                type="password" label="Password" title="Enter your password here" name="pswd"
+                                placeholder="Enter Password" onchange={pass}></lightning-input>
+                            <br>
+
+                            <lightning-button class="slds-align_absolute-center buttonClr" variant="brand" label="Login"
+                                name="login" title="Click on me" onclick={handleLoginCheck}></lightning-button>
+                            <br> <br>
+                            <lightning-button class="slds-align_absolute-center" variant="text-destructive"
+                                label="Forgotten Password?" name="Company Information" title="Click on me"
+                                onclick={clickOnForgotButtonHandler}>
+                            </lightning-button>
+                            <br> <br>
+                            <lightning-button class="slds-align_absolute-center buttonColor" variant="outline-brand"
+                                label="Create New Account / Sign-Up" title="Dont you have a Account Click Here"
+                                onclick={clickedOnSignUp}></lightning-button>
+
+
+                            <!-- 
+                        <template if:true={showSignUpPage}>
+                            <c-sign-up></c-sign-up>
+                        </template> -->
+                        </lightning-layout-item>
+
+                    </lightning-layout>
+
+                </div>
+            </div>
+
+
+            <template if:true={showSignUpPage}>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_4-of-12">
+                    <div class="slds-box" style="height: 80vh;">
+                        <p style="text-align: center; font:caption; font-size:larger"><b>Sign-Up / Register Here</b></p>
+                        <br>
+                        <lightning-layout multiple-rows="true" class="slds-align_absolute-center">
+                            <lightning-layout-item>
+                                <lightning-input style="-webkit-text-fill-color:#000000" class="inputboxcolor"
+                                    type="text" label="First Name" title="Enter Your First Name Here"
+                                    placeholder="Enter First Name">
+                                </lightning-input>
+                                <lightning-input style="-webkit-text-fill-color:#000000" class="inputboxcolor"
+                                    type="text" label="Last Name" title="Enter Your Last Name Here"
+                                    placeholder="Enter Last Name">
+                                </lightning-input>
+                                <lightning-input style="-webkit-text-fill-color:#000000" class="inputboxcolor"
+                                    type="phone" label="Phone" title="Enter Your Phone Number Here"
+                                    placeholder="Enter Phone Number Here">
+                                </lightning-input>
+                                <lightning-input style="-webkit-text-fill-color:#000000" class="inputboxcolor"
+                                    type="email" label="E-Mail" title="Enter Your Email Here"
+                                    placeholder="Enter Email Here">
+                                </lightning-input>
+                                <lightning-input style="-webkit-text-fill-color:#000000" class="inputboxcolor"
+                                    type="text" label="Job-Role" title="Enter Your Job-Role Here"
+                                    placeholder="Enter Job-Role Here">
+                                </lightning-input>
+                                <br>
+                                <lightning-button class="slds-align_absolute-center buttonClr" variant="brand"
+                                    label="Create New User" name="" title="Click on me"
+                                    onclick={clickOnInfoButtonHandler}></lightning-button>
+                                
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+                </div>
+            </template>
+
+
+        </div>
+    </div>
+
+</template>

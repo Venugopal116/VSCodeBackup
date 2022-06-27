@@ -1,0 +1,12 @@
+<template>
+    <template if:true={showRoomInfo}>
+        <div class="slds-var-p-around_medium" onclick={tileClickHandler}>
+            <lightning-tile label={meetingRoomInfo.roomName} href="/path/to/somewhere">
+                <p class="slds-truncate" title={meetingRoomInfo.roomCapacity}>
+                    Room Capacity: {meetingRoomInfo.roomCapacity}         
+                </p>
+            </lightning-tile>
+        </div>
+    </template>
+    
+</template>

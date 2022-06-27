@@ -1,0 +1,91 @@
+<template>
+
+    <lightning-layout multiple-rows="true" style={recruitPortalBg}>
+        <template if:true={defaultHomePage}>
+            <lightning-layout-item padding="around-small" size="12">
+                <lightning-layout-item padding="around-small" size="12" style="height: 7vh;">
+                    <div class="navbar">
+                        <div class="icon">
+                            <h2 class="logo">Da <span>Hire</span></h2>
+                        </div>
+                        <div class="menu">
+                            <ul>
+                                <li><a href="#">HOME</a></li>
+                                <li><a href="#">ABOUT</a></li>
+                                <li><a href="#">SERVICE</a></li>
+                                <li><a href="#">DESIGN</a></li>
+                                <li><a href="#">CONTACT</a></li>
+                            </ul>
+                        </div>
+                        <div class="search">
+                            <input class="srch" type="search" name="" placeholder="Type To text">
+                            <button class="btn">Search</button>
+                        </div>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="12" style="height: 60vh;">
+                    <lightning-layout-item padding="around-small" size="6" style="height: 50vh;">
+                        <div class="content">
+                            <h1>Find Your <br><span>Dream</span> <br>Job</h1>
+                            <p class="par">Hey,we are from Cloud Odyssey Team.<br> We are partenered with SALESFORCE
+                                <br>Join with Us,You have great future with us
+                            </p>
+                            <button class="cn" onclick={showenrollpagehandler}>Apply for Position</button>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout-item>
+            </lightning-layout-item>
+        </template>
+
+        <lightning-layout-item padding="around-small" size="12" style="height:100vh;">
+            <template if:true={showEnrollPage}>
+                <lightning-card style={recruitPortalBg} title="Enroll / Apply Form">
+                    <lightning-card title="Fill All Details">
+                        <lightning-record-form object-api-name="Recrutiment__c" record-id={recordId} columns="2"
+                            mode="edit" layout-type="Full" onsuccess={handleSuccess_recordIdCapture}>
+                        </lightning-record-form>
+                        <lightning-button variant="brand" label="close" onclick={closeEnrollpagehandler}>
+                        </lightning-button>
+                        <lightning-button variant="brand" label="PreviewResume" onclick={previewResumePgHandler}>
+                        </lightning-button>
+
+                    </lightning-card>
+                </lightning-card>
+            </template>
+            <!-- +++++++++++++++++++++++++++++resume page start ++++++++++++++++++++++++++++++++++++++-->
+            <template if:true={previewResumePg}>
+                <lightning-layout-item padding="around-small" size="12">
+                    <lightning-card style="height:100vh;">
+                        <template if:true={recruitObjLisData}>
+                            <template for:each={recruitObjLisData} for:item="recField">
+                                <lightning-layout-item key={recField.id}>
+                                    <h1>Resume data here</h1>
+                                    <h1>{recField.id}</h1>
+                                    <h1>{recField.Candidate_Name__c}</h1>
+                                    <h1>{recField.Phone__c}</h1>
+                                    <h1>{recField.Email__c}</h1>
+                                    <h1>{recField.Years_Of_Exp__c}</h1>
+                                    <h1>{recField.Notice_Period_Days__c}</h1>
+                                    <h1>{recField.Current_Location__c}</h1>
+                                    <h1>{recField.Primary_Skill__c}</h1>
+                                    <h1>{recField.Secondary_Skill__c}</h1>
+                                    <h1>{recField.Choose_Skill_Set__c}</h1>
+
+                                    <lightning-button variant="brand" label="close Preview" onclick={closePreviewButtonHandler}>
+                                    </lightning-button>
+                                    
+
+                                </lightning-layout-item>
+
+                            </template>
+                        </template>
+                    </lightning-card>
+                </lightning-layout-item>
+            </template>
+            <!-- +++++++++++++++++++++++++++++resume page end ++++++++++++++++++++++++++++++++++++++-->
+        </lightning-layout-item>
+
+
+    </lightning-layout>
+
+</template>
