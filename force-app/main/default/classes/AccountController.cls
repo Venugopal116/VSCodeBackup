@@ -1,6 +1,12 @@
 public without sharing class AccountController {
 
     @AuraEnabled(cacheable=true)
+    public static List<Account> getAccounts() {
+
+        return [SELECT id,Name,Phone FROM Account LIMIT 10];
+    }
+
+    @AuraEnabled(cacheable=true)
    
     public static List<Account> getAccountList() {
 

@@ -1,4 +1,13 @@
 public with sharing class ContactLwcController_G {
+
+  @AuraEnabled(cacheable=true)
+ 
+  public static List<Contact> getContactsByAccountId(string accountId){
+
+    return [SELECT id,FirstName,LastName,Phone,Email FROM Contact  WITH SECURITY_ENFORCED]; 
+    
+
+  }
  
   @AuraEnabled(cacheable=true)
  

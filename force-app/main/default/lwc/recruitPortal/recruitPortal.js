@@ -2,6 +2,8 @@ import { LightningElement,track,wire } from 'lwc';
 
 import TREEpic from '@salesforce/resourceUrl/treePic';
 import getAllRecFieldDataForResume from '@salesforce/apex/RecrutimentControllerLwc.getAllFieldDataToResume';
+//import window from 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+
 
 
 export default class RecruitPortal extends LightningElement {
@@ -71,6 +73,28 @@ handleSuccess_recordIdCapture(event){
 // }
 
 //----------------------------bg---------------------------------------------------
+handlePDF(){
+  window.print();
+}
+
+GeneratePDF() {
+  let pdf = new jsPDF('p', 'pt', 'a4');
+  pdf.html(document.body, {
+    callback: function (pdf) {
+        // pdf.save('test.pdf');
+        window.open(output('bloburl'));
+    }
+  });
+}
+// generatePdfFile(){
+//   window.onload = function(){
+//     document.querySelector(".pdfDownload").addEventListener('click',()=>{
+//       const resume =this.document.querySelector('resume');
+//     })
+//   }
+// }
+
+
     get recruitPortalBg() {
 
         return ` width: 100%;
