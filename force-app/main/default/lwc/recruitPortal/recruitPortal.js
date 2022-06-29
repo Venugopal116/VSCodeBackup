@@ -32,9 +32,7 @@ closeEnrollpagehandler(){
 }
 
 previewResumePgHandler(){
-//   setTimeout(() => {
-//     eval("$A.get('e.force:refreshView').fire();");
-// }, 1000);
+
 
   this.showEnrollPage=false;
   this.defaultHomePage=false;
@@ -66,34 +64,10 @@ handleSuccess_recordIdCapture(event){
    
  }
 
-//  updateRecordView() {
-//   setTimeout(() => {
-//        eval("$A.get('e.force:refreshView').fire();");
-//   }, 1000); 
-// }
-
 //----------------------------bg---------------------------------------------------
 handlePDF(){
   window.print();
 }
-
-GeneratePDF() {
-  let pdf = new jsPDF('p', 'pt', 'a4');
-  pdf.html(document.body, {
-    callback: function (pdf) {
-        // pdf.save('test.pdf');
-        window.open(output('bloburl'));
-    }
-  });
-}
-// generatePdfFile(){
-//   window.onload = function(){
-//     document.querySelector(".pdfDownload").addEventListener('click',()=>{
-//       const resume =this.document.querySelector('resume');
-//     })
-//   }
-// }
-
 
     get recruitPortalBg() {
 

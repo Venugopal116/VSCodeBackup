@@ -1,0 +1,22 @@
+<template>
+   <lightning-card title="Delete selected Accounts">
+
+    <lightning-layout-item>
+        <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="id"
+                    data={accounts.data}
+                    columns={cols}
+                    onrowselection={getSelectedAccRecId} >     <!-- >  onrowaction={handleRowAction} -->
+            </lightning-datatable>
+        </div>
+    </lightning-layout-item>
+
+    <lightning-layout-item>
+        <lightning-button type="brand" label="Delete Acc's" onclick={handleDelAccRecords}>
+
+        </lightning-button>
+    </lightning-layout-item>
+
+   </lightning-card> 
+</template>

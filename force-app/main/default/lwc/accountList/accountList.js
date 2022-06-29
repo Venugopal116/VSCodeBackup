@@ -17,7 +17,7 @@ export default class AccountList extends LightningElement {
     event.preventDefault();
     this.accountId=event.target.dataset.accountid;
     // this.accountId=event.target.value;
-    
+  
     console.log('=============accid.......',this.accountId);
 
   }
