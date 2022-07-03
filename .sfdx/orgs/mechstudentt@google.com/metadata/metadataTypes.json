@@ -643,6 +643,41 @@
         "xmlName": "ChatterExtension"
       },
       {
+        "directoryName": "aiApplications",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "ai",
+        "xmlName": "AIApplication"
+      },
+      {
+        "directoryName": "aiApplicationConfigs",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "aiapplicationconfig",
+        "xmlName": "AIApplicationConfig"
+      },
+      {
+        "directoryName": "mlPredictions",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "mlPrediction",
+        "xmlName": "MLPredictionDefinition"
+      },
+      {
+        "directoryName": "mlRecommendations",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "mlRecommendation",
+        "xmlName": "MLRecommendationDefinition"
+      },
+      {
+        "directoryName": "mlDataDefinitions",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "mlDataDefinition",
+        "xmlName": "MLDataDefinition"
+      },
+      {
         "directoryName": "platformEventChannels",
         "inFolder": false,
         "metaFile": false,
@@ -755,26 +790,6 @@
         "xmlName": "BrandingSet"
       },
       {
-        "directoryName": "communityThemeDefinitions",
-        "inFolder": false,
-        "metaFile": false,
-        "suffix": "communityThemeDefinition",
-        "xmlName": "CommunityThemeDefinition"
-      },
-      {
-        "directoryName": "communityTemplateDefinitions",
-        "inFolder": false,
-        "metaFile": false,
-        "suffix": "communityTemplateDefinition",
-        "xmlName": "CommunityTemplateDefinition"
-      },
-      {
-        "directoryName": "managedContentTypeBundles",
-        "inFolder": false,
-        "metaFile": false,
-        "xmlName": "ManagedContentTypeBundle"
-      },
-      {
         "directoryName": "managedContentTypes",
         "inFolder": false,
         "metaFile": false,
@@ -789,38 +804,11 @@
         "xmlName": "SiteDotCom"
       },
       {
-        "directoryName": "experiences",
-        "inFolder": false,
-        "metaFile": false,
-        "xmlName": "ExperienceBundle"
-      },
-      {
-        "directoryName": "networks",
-        "inFolder": false,
-        "metaFile": false,
-        "suffix": "network",
-        "xmlName": "Network"
-      },
-      {
         "directoryName": "networkBranding",
         "inFolder": false,
         "metaFile": true,
         "suffix": "networkBranding",
         "xmlName": "NetworkBranding"
-      },
-      {
-        "directoryName": "navigationMenus",
-        "inFolder": false,
-        "metaFile": false,
-        "suffix": "navigationMenu",
-        "xmlName": "NavigationMenu"
-      },
-      {
-        "directoryName": "audience",
-        "inFolder": false,
-        "metaFile": false,
-        "suffix": "audience",
-        "xmlName": "Audience"
       },
       {
         "directoryName": "flowCategories",
@@ -863,44 +851,6 @@
         "metaFile": false,
         "suffix": "prompt",
         "xmlName": "Prompt"
-      },
-      {
-        "childXmlNames": [
-          "ManagedTopic"
-        ],
-        "directoryName": "managedTopics",
-        "inFolder": false,
-        "metaFile": false,
-        "suffix": "managedTopics",
-        "xmlName": "ManagedTopics"
-      },
-      {
-        "directoryName": "moderation",
-        "inFolder": false,
-        "metaFile": false,
-        "suffix": "keywords",
-        "xmlName": "KeywordList"
-      },
-      {
-        "directoryName": "userCriteria",
-        "inFolder": false,
-        "metaFile": false,
-        "suffix": "userCriteria",
-        "xmlName": "UserCriteria"
-      },
-      {
-        "directoryName": "moderation",
-        "inFolder": false,
-        "metaFile": false,
-        "suffix": "rule",
-        "xmlName": "ModerationRule"
-      },
-      {
-        "directoryName": "cmsConnectSource",
-        "inFolder": false,
-        "metaFile": false,
-        "suffix": "cmsConnectSource",
-        "xmlName": "CMSConnectSource"
       },
       {
         "directoryName": "samlssoconfigs",
