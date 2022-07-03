@@ -4,6 +4,10 @@ import getAccounts from '@salesforce/apex/LWCuniversalController.getAccounts';
 //import DeleteSelectedAccs from '@salesforce/apex/LWCuniversalController.deleteSelectedAccs';
 import deleteSelectedAccounts from '@salesforce/apex/LWCuniversalController.deleteSelectedAccounts';
 
+import getContactsByAccountId from '@salesforce/apex/ContactController.getContactsByAccountId';
+import AccName from '@salesforce/schema/Account.Name';
+
+
 // importing to refresh the apex after delete the records.
 import {refreshApex} from '@salesforce/apex';
 
@@ -11,6 +15,7 @@ import {refreshApex} from '@salesforce/apex';
 import {ShowToastEvent} from 'lightning/platformShowToastEvent';
 
 // datatable columns
+
 const columns = [ 
     {
         label: 'Name',
@@ -27,18 +32,50 @@ const columns = [
         label: 'Email',
         fieldName: 'Email',
         type: 'email'
-    }
+    },
+     
+];
+
+const columnsContact = [ 
+    {
+        label: 'First Name',
+        fieldName: 'FirstName'
+    }, {
+        label: 'Last Name',
+        fieldName: 'LastName',
+    }, {
+        label: 'Phone',
+        fieldName: 'Phone',
+        type: 'phone'
+    }, {
+        label: 'Email',
+        fieldName: 'Email',
+        type: 'email'
+    },{
+        label: 'AccountName',
+        fieldName: 'Account_Name__c',
+    },
 ];
 
 export default class DeleteMultiRowsAccs extends LightningElement {
 
     cols=columns;
+    ContactCols=columnsContact;
 
-    @api selectedAccountlist;
+    accConRecs;
+    errr;
+
+
+    @api selectedAccountIdlist;
     @api errMsg;
     @api selectedRecCount; //optional
+   // @api myId='0015i000005LpA5AAK';
 
      @wire (getAccounts) accounts;
+
+    // @wire (getContactsByAccountId,{selectedAccountIdlist:'$selectedAccountIdlist'}) accRelatedContacts; 
+     
+
 
      getSelectedAccRecId(event){   // method to get selected records for delete opertaion 
 
@@ -50,17 +87,17 @@ export default class DeleteMultiRowsAccs extends LightningElement {
 
         console.log('selectedRecordID'+JSON.stringify(selectedRows));
 
-        this.selectedAccountlist=[]; //create array and push all recid's to this array
+        this.selectedAccountIdlist=[]; //create array and push all acc recid's to this array
 
         for (let i = 0; i<selectedRows.length; i++){
-            this.selectedAccountlist.push(selectedRows[i].Id);
+            this.selectedAccountIdlist.push(selectedRows[i].Id);
         }
-        console.log('Array list after push',this.selectedAccountlist);
+        console.log('Array list after push',this.selectedAccountIdlist);
     }
 
     handleDelAccRecords(event){
         deleteSelectedAccounts({
-            accIdDelList:this.selectedAccountlist
+            accIdDelList:this.selectedAccountIdlist
         })
         .then(()=> {  //result we didnt use here,bcoz not assigning to any
            
@@ -87,6 +124,41 @@ export default class DeleteMultiRowsAccs extends LightningElement {
         );
         
         });
+
+    }
+    //------------------------------------
+    accRelContactBtnHandler(){
+
+        getContactsByAccountId({
+            selectedAccountIdlist:this.selectedAccountIdlist
+        })
+        .then((result)=> {       
+             this.accConRecs=result;
+             console,log('condata---------',this.accConRecs);
+            return refreshApex(this.accRelatedContacts); 
+        })
+        .catch(error => {
+            this.errr = error;
+           console.log('error========= ',JSON.stringify(this.errr));
+        
+        });
+
+        this.filterSelectedRecord();
+
+    }
+    //-------------------------------------------------------------
+
+    // accRelContactBtnHandler(){
+    //     console.log('-------------btnhandlerdata--------- ',JSON.stringify(this.accRelatedContacts));
+        
+    //     return refreshApex(this.accRelatedContacts);
+
+    // }
+
+    filterSelectedRecord(){
+        value  = accounts;
+        console.log('value'+value);
+
 
     }
      
