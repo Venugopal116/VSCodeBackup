@@ -2,6 +2,8 @@ import { LightningElement,track,wire } from 'lwc';
 
 import TREEpic from '@salesforce/resourceUrl/treePic';
 import getAllRecFieldDataForResume from '@salesforce/apex/RecrutimentControllerLwc.getAllFieldDataToResume';
+//import window from 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+
 
 
 export default class RecruitPortal extends LightningElement {
@@ -30,9 +32,7 @@ closeEnrollpagehandler(){
 }
 
 previewResumePgHandler(){
-//   setTimeout(() => {
-//     eval("$A.get('e.force:refreshView').fire();");
-// }, 1000);
+
 
   this.showEnrollPage=false;
   this.defaultHomePage=false;
@@ -64,13 +64,11 @@ handleSuccess_recordIdCapture(event){
    
  }
 
-//  updateRecordView() {
-//   setTimeout(() => {
-//        eval("$A.get('e.force:refreshView').fire();");
-//   }, 1000); 
-// }
-
 //----------------------------bg---------------------------------------------------
+handlePDF(){
+  window.print();
+}
+
     get recruitPortalBg() {
 
         return ` width: 100%;

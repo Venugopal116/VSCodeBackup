@@ -58,7 +58,9 @@
                     <lightning-card style="height:100vh;">
                         <template if:true={recruitObjLisData}>
                             <template for:each={recruitObjLisData} for:item="recField">
-                                <lightning-layout-item key={recField.id}>
+
+                                <!-- ===================================================== -->
+                                <!-- <lightning-layout-item key={recField.id}>
                                     <h1>Resume data here</h1>
                                     <h1>{recField.id}</h1>
                                     <h1>{recField.Candidate_Name__c}</h1>
@@ -75,11 +77,95 @@
                                     </lightning-button>
                                     
 
-                                </lightning-layout-item>
+                                </lightning-layout-item> -->
+                            <!-- ===================================================== -->
+                            <div class="resume c-container" key={recField.id}>
+                               
+                                <lightning-layout multiple-rows="true">
+                                    <lightning-layout-item padding="around-small" size="12">
+                                        <div class="page-section page-header">
+                                            <h2 class="resumeHead slds-align_absolute-center">{recField.Candidate_Name__c}</h2><br>
+                                            <div class="headingsDirection">
+                                                <h2 class="resumeHeadMail ">{recField.Email__c}</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <h2 class="resumeHeadPhone ">||</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <h2 class="resumeHeadPhone ">{recField.Phone__c}</h2>
+                        
+                                            </div>
+                                        </div>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="around-small" size="12">
+                                        <lightning-layout>
+                                            <lightning-layout-item size="7">
+                                                <div class="page-section page-right">
+                                                    <h2 class="res_Headings">Objective</h2>
+                        
+                                                    <p class="res_para">Salesforce certified Platform developer (PD1),
+                                                        over {recField.Years_Of_Exp__c} years of experience in Salesforce customization.
+                                                        Experience on Salesforce CRM platform, Knowledge of different
+                                                        environments of SFDC such as Sales Cloud, Service Cloud. Experience
+                                                        in Apex Classes, Apex Triggers, Visualforce Pages, Lightning Web Components,
+                                                        Scheduled Apex, and Batch Apex along with Test Classes. Experience in integrations as
+                                                        well.
+                                                        Have good experience in writing SOQL and SOSL queries. Good knowledge of Agile, Scrum,
+                                                        and other methodologies. Implement integration solutions using API’s and web services
+                                                        technologies,
+                                                        analyze current MuleSoft code, defining and improving new systems
+                                                    </p>
+                        
+                                                    <h2 class="res_Headings">Education</h2>
+                                                    <p class="res_para"> B.Tech Graduate </p>
+                                                    <p class="res_para"> GIET Engineering College-Rajahmundry </p>
+                                                    <p class="res_para"> JNTU-K </p>
+                        
+                                                    <h2 class="res_Headings">Projects</h2>
+                                                    <p class="res_para">* Skill Tracker</p>
+                                                    <p class="res_para">* Terex Corporation</p>
+                                                    <p class="res_para">* Hospital Management</p>
 
+                                                    <h2 class="res_Headings">Notice Period</h2>
+                                                    <p class="res_para">- {recField.Notice_Period_Days__c} days </p>
+                        
+                                                </div>
+                                            </lightning-layout-item>
+                                            <lightning-layout-item size="5">
+                                                <div class="page-section page-left">
+                        
+                                                    <h2 class="res_Headings">Skill Set</h2>
+                        
+                                                    <p class="res_para">* {recField.Primary_Skill__c} </p>
+                                                    <p class="res_para">* {recField.Secondary_Skill__c} </p>
+                        
+                                                    <h2 class="res_Headings">Other Skill Set</h2>
+                                                    <p class="res_para">* Java Script </p>
+                                                    <p class="res_para">* HTML </p>
+                                                    <p class="res_para">* CSS </p>
+                        
+                                                    <h2 class="res_Headings">Address</h2>
+                                                    <p class="res_para"> D.no: </p>
+                                                    <p class="res_para"> XYZ street </p>
+                                                    <p class="res_para"> My city </p>
+                                                    <p class="res_para"> My State </p>
+                                                    <p class="res_para"> My Country </p>
+                                                    <p class="res_para"> PIN: 00000 </p>
+
+                                                    <h2 class="res_Headings">Present Location</h2>
+                                                    <p class="res_para">{recField.Current_Location__c}</p>
+                        
+                                                </div>
+                                            </lightning-layout-item>
+                                        </lightning-layout>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+                            </div>
                             </template>
                         </template>
                     </lightning-card>
+
+                    <lightning-button variant="brand" label="close Preview" onclick={closePreviewButtonHandler}>
+                    </lightning-button>
+
+                    <lightning-button label="Download PDF" onclick={handlePDF} class="pdfDownload"></lightning-button>
+
                 </lightning-layout-item>
             </template>
             <!-- +++++++++++++++++++++++++++++resume page end ++++++++++++++++++++++++++++++++++++++-->

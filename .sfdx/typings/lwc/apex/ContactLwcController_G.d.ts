@@ -1,3 +1,6 @@
+declare module "@salesforce/apex/ContactLwcController_G.getContactsByAccountId" {
+  export default function getContactsByAccountId(param: {accountId: any}): Promise<any>;
+}
 declare module "@salesforce/apex/ContactLwcController_G.getContacts" {
   export default function getContacts(): Promise<any>;
 }
